@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head> <!-- Script kısmını head kısmınada yazabilirsin.-->
+<body>
+    <script>
+
+        //  dizi instanceof Object  dizi tanımla bu kod consol'da Object'in instance mı diyedir.
+       
+        //  number instanceof Number false  Instance alamadığı için false geliyor.
+
+        // Tek satır yorum
+        /*
+            Çok satır yorum
+        */
+        /*
+        Dinamiktir, esnektir, ; ihtiyaç yoktur.
+            JAVASCRIPT
+            1 - Inline (Elemenet içi)
+            2 - Script tag'ları arasına
+            3 - Harici bir .js dosya ile
+        */
+        //alert('deneme');
+
+        // Değişken Tanımlama
+
+        // Data Types
+
+        // Primitive Types
+        /*
+            1 - boolean
+            2 - number
+            3 - string
+            4 - undefined
+            5 - (object)
+            
+        */
+
+        // Object ve object farklı şeyler.
+
+        // Instance Types 
+        /*
+            1 - Object
+                a - Boolean
+                b - Number
+                c - String
+                d - Array
+                e - Date
+
+                -------------------
+                f - Person
+                g - Category
+        */
+
+        // HTMLElement < Element < Node < EventTarget < Object
+
+
+        // var C#'da data tipi değildir. Çünkü attığımız şeyi üstüne alır. Kodu okuduktan sonra int yada string oluyor, öncesinde bir ismi yok.
+
+        var değişken;
+        var isim = "Serkan";
+        var sayi = 5;
+        var yazıOlarakSayı = "323";
+        var durum = true;
+        var ondalıklı = 1.25;
+
+        //İşlemleri ikili ikili yapıyor
+
+        //alert(isim + sayi); //serkan5
+        //alert(ondalıklı + sayi);  //6.25
+        //alert(sayi + yazıOlarakSayı); //5323
+        //alert(sayi + sayi + yazıOlarakSayı); //10323 // Önce sayi+ sayi= int-int = 5+5=10 daha sonra int-string = string olduğu içinde 10323 gelecek.
+        //alert(sayi + sayi(yazıOlarakSayı));   //55323
+        //alert(yazıOlarakSayı + sayi + sayi);  //32355
+
+        function test() {
+            var deneme = 55;
+            garipŞey = deneme + deneme; // Globel değişken gibi davranır. Field gibi
+        }
+
+        /*
+                             C# kısmı.
+        var anonimus = {FirstName = "Bişey", LastName = "Başka Şey"};
+        // a' anonymous type = anonim tip.
+        anonimus.FirstName = "Deneme";
+        */
+
+        var name = new String("Aydın");     // Stringin diğer yazımı
+        var number = new Number(150);       // Int'ın diğer yazımı.
+        var date = new Date('03.11.2016')   // Date yazımı.
+        var state = new Boolean(false);     // Bool yazımı.
+        var state2 = false;
+        var bildik = "deneme";
+        var bildik2 = "";  // var bildik2;
+        var sayı = 0;      // var sayı;
+
+
+
+        // KARAR YAPILARI (if -else)
+
+        // If'in diğer görevide değişkene değer atılıp atılmaması.
+
+        // If-Else'de eğer new boolean demezsek sadece atadığımız değere bakıyoruz eğer değer varsa var state2=false vs gibi direk if'deki ilk'e düşer. Ama eğer değer atamazsak else'ye düşer.
+
+
+        //if (state == true) {             // Koşul Yanlış
+        //if(state2){                      // Koşul Yanlış
+        //if(state){                        // Koşul Doğru  // İlk değeri false atadığımız için if(state==false)
+        //if(bildik){                      // Koşul Doğru
+
+        /*
+        if (state) {                         // Koşul Yanlış
+            alert("Koşul Doğru");
+        } else {
+            alert("Koşul Yanlış");
+        }
+        */
+
+        var sayi = 5;
+        var sayi2 = 9;
+        var sayi3 = "5";
+        var sayi4 = "22";
+
+        // Eğer 2 tane eşittir kullanırsak string ve int değerlerinin aynı olup olmadığına bakar.
+        // Eğer 3 tane eşittir kullanırsak değerlerini karşılaştırmanın ötesinde tipine de bakarak sonucu getirir.
+
+        //if (sayi == sayi2) {                   // Yanlış
+        //if (sayi == sayi3) {                   // Doğru
+        //if (sayi == sayi4) {                   // Yanlış
+        //if (sayi === sayi3) {                  // Yanlış
+        //if (sayi != sayi2) {                   // Doğru
+        //if (sayi != sayi3) {                   // Yanlış
+        //if (sayi !== sayi3) {                  // Doğru
+        //    alert("Doğru");
+        //} else {
+        //    alert("Yanlış");
+        //}
+
+        //SWITCH-CASE
+        /*
+        var day = 2;
+        switch (day) {
+            case 1:
+                alert("P.tesi");
+                break;
+            case 2:
+                alert("Salı");
+                break;
+            case 3:
+                alert("Çarşamba");
+                break;
+            case 4:
+                alert("Perşembe");
+                break;
+            case 5:
+                alert("Cuma");
+                break;
+            case 6:
+                alert("C.ertesi");
+                break;
+            case 7:
+                alert("Pazar");
+                break;
+        }
+
+        */
+
+
+        // DÖNGÜLER (While)     (while --> Koşula göre döngüdür.   for --> Sayac kullanılarak döngü sağlanır. foreach --> Collection içinde döngü sağlanır.)
+
+        //var sayi=5;
+        //while (sayi < 10) {
+        //    alert(sayi);
+        //    sayi++;
+        //}
+
+
+        ////////EXTRA///////////
+        // Sayıyı 5'den başlatıyoruz. Sürekli döngüde ama sayi 10'a eşit olduğunda döngüden çıkıcak.
+        //var sayi=5;
+        //while (sayi) {
+        //    alert(sayi);
+        //    sayi++;
+        //    if (sayi == 10) {
+        //        sayi = undefined;  // DÖngüden çıkma
+        //        // sayi = null; // İkiside Aynı anlama geliyor.
+        //    }
+        //}
+        //alert("Döngü Bitti");
+
+
+        //FOR
+        //for (var i = 0; i < 6; i++) {
+        //    alert(i);
+        //}
+
+
+        //for (var i= 4; i; i--) {  //  4-3-2-1   çıktısı. Ama Sayıya değer atamadığımız için bunuda 0 olarak görüyor. Buda döngüyü 0'a gelince bitiriyor.
+        //    alert(i);
+        //}
+
+        //for (var i = 4; i>-14; i--) { // 0'ıda yazdırıyor. Eksili değerlerede gidiyor.
+        //    alert(i);
+        //}
+
+        //for (var i = 4; i; i--) {    // Burayı anlamadım...
+        //    if (i == 2) {
+        //        i = "";
+        //    }
+        //}
+
+        // ARRAYS
+
+        //var isimler = ["Ayça", "Fidan",2, "Ferhat", "Burak", "Bilal",1];
+        var isimler = ["Ayça", "Fidan", "Ferhat", "Burak", "Bilal"];
+
+        //alert(isimler[2]);  // 0'dan başlıyor.
+        //isimler[0] = "Can";
+        //alert(isimler[0]);
+
+        // Dizimiz 5 elemanlıydı. Ben 8.indise Mehmet adını atadım ve dizi 9 elemanlı oldu. Aralardaki 5-6-7 = undefined değerindedir.
+        //isimler[8] = "Mehmet";
+        //alert(isimler[5]);
+
+        //var sayılar = [0, 1, 2, 0, 3, 4];
+        //sayılar[8] = 5;
+        //alert(sayılar[7]);  // undefined
+
+        // FORIN   // Forin sadece index döndüyor item döndürmüyor.
+
+        //for (var i in isimler) {   // Sadece içindeki indisleri döndürür.
+        //    alert(i);
+        //}
+
+        //for (var i in isimler) {   // Sadece içindeki indisleri döndürür.
+        //    alert(isimler[i]);
+        //}
+
+        // ARRAY METHODS
+        //alert(isimler.toString());  // Kendi kendine ovveride ederek direk tüm diziyi getiriyor.
+        //var dizi = ["asd", 23, false, 1.24];
+        //alert(dizi.toString());  // Hepsine stringe dönüştürüp algılıyor.
+        //alert(isimler);
+        //alert(isimler.join("-"));  // Araya - koyarak yazar.
+
+        // LIFO
+        //(bkz : C# Stack (can be generic))
+        /*
+        alert(isimler.length);
+        var çıkarılan = isimler.pop();
+        alert(çıkarılan);  // Sondan çıkarıyor
+        alert(isimler.length);
+
+        isimler.push("Can");  // Sona Ekliyor.
+        alert(isimler);
+        */
+        ////////////
+        // FIFO
+        //(bkz : C# Queue (can be generic))
+        /*
+        var kayanKişi = isimler.shift();  // Baştan çıkarıyor.
+        alert(isimler);
+        alert(kayanKişi);
+        alert(isimler);
+        isimler.unshift("Mehmet");  // Baştan ekliyor.
+        alert(isimler);
+        */
+        var cumle = "Dışarda hava çok hava güzel";
+        //var index = cumle.indexOf("a");  // İlk a harfinin bulunduğu indisi getiriyor.
+        //alert(index);
+        //alert(cumle.lastIndexOf("a"));  // Sondan başlıyor "a"'yı bulunca duruyor. Daha sonra baştan başlayıp o "a"'ya kadar olan indislerin değerini veriyor.
+        //alert(cumle.indexOf("hava"));
+        //alert(cumle.lastIndexOf("hava"));   //17 Sondan hava yı buldu. Baştan 2.havaya gelip ordaki "h"nin indisinin buluyor.
+
+        /*
+            ÖDEV (3'er örnek)
+
+          
+            SEARCH  // Indisi getiriyor.
+            
+            var str = "Visit W3Schools!";
+            var n = str.search("W3Schools");  //  (6)
+            
+            var str = "Mr. Blue has a blue house";  // Küçük-Büyük duyarlıdır.
+            var n = str.search("blue"); (15)
+
+            var str = "Mr. Blue has a blue house";
+            var n = str.search(/blue/i); // Baştaki harfi büyültüp ona göre aratıyor. (4)
+            
+         SLICE
+        
+         
+         SPLİCE
+
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];  
+            fruits.splice(2, 0, "Lemon", "Kiwi"); //2.indise elemanı "Lemon" ekle. 0 dediği için çıkartma yapma yanına Kiwiyi ekle (Banana,Orange,Lemon,Kiwi,Apple,Mango)
+
+            var fruits = ["Banana", "Orange", "Apple", "Mango"]; 
+            fruits.splice(2, 1, "Lemon", "Kiwi"); //2.indise elemanı "Lemon" ekle. Yanına Kiwi ekle 1 dediği için yanındaki "Apple" çıkarttı. (Banana,Orange,Lemon,Kiwi,Mango)
+
+            var fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
+            fruits.splice(2, 2); // Burdada 2 tane çıkartıyor "Apple,Mango" çıkıyor. (Banana,Orange,Kiwi)
+            
+            REPLACE
+
+            var str = "Visit Microsoft!";    // Microsoft'u kelime olarak W3Sc.. olarak değiştirdi  Visit W3Schools
+            var res = str.replace("Microsoft", "W3Schools");
+
+            var str = "Mr Blue has a blue house and a blue car";  // Tüm blue'ları red yaptı.  Mr Blue has a red house and a red car
+            var res = str.replace(/blue/g, "red");
+            
+            var str = "Mr Blue has a blue house and a blue car";   Mr red has a red house and a red car
+            var res = str.replace(/blue/gi, "red");  // Byük blue'ları bile red yaptı.
+                        
+            SUBSTRING
+
+            var str = "Hello world!"; .
+            var res = str.substring(1, 4); //  1. indisden sonra 4 tane getir. Ama 4 dahil olmadığı için (ell) gelicek
+            
+            var str = "Hello world!"; 
+            var res = str.substring(2); // 2.indis ve sonrasını getir.  (llo world!)
+            
+            var str = "Hello world!";
+            var res = str.substring(-3);  // Böyle bir indis yok direk hepsini getiriyor.  (Hello world!)
+            
+            SUBSTR
+            
+            var str = "Hello world!";
+            var res = str.substr(1, 4);  // 1. indisden sonra 4 tane getir. (ello)
+
+            var str = "Hello world!";  //2. indisden sonraki hepsini getir.  (llo world!)
+            var res = str.substr(2);
+            
+            var str = "Hello world!";
+            var res = str.substr(11, 1);  // 11. indisden sonra 1 tane getir. (!)
+
+            TOUPPERCASE
+
+            var str = "Hello World!";  
+            var res = str.toUpperCase();// Hepsini Büyüttü.  (HELLO WORLD! )
+
+            TOLOWERCASE
+
+            var str = "Hello World!";  
+            var res = str.toLowerCase();// Hepsini Küçülttü. (hello world!)
+
+            CONCAT
+
+            var hege = ["Cecilie", "Lone"];     
+            var stale = ["Emil", "Tobias", "Linus"];
+            var children = hege.concat(stale); //  Çocuğu diyor oraya kadar olanları birleştiriyor join gibi. (Cecilie,Lone,Emil,Tobias,Linus)
+            
+            var hege = ["Cecilie", "Lone"];    
+            var stale = ["Emil", "Tobias", "Linus"];
+            var kai = ["Robin"];
+            var children = hege.concat(stale,kai); (Cecilie,Lone,Emil,Tobias,Linus,Robin)
+            
+            CHARAT
+
+            var str = "HELLO WORLD";     
+            var res = str.charAt(0); // 0.indisi getiriyor.  (H)
+
+            var str = "HELLO WORLD";
+            var res = str.charAt(str.length-1);       // uzunluktan -1'i çıkarıp o indisdeki getiriyor. (D)
+            
+            SPLIT
+
+            var str = "How are you doing today?";  // Boşlukları siliyor araya virgül ekleyerek yazıyor. (How,are,you,doing,today?)
+            var res = str.split(" ");
+
+            var str = "How are you doing today?";  
+            var res = str.split("");  // Her kelime için boşlukları virgül yapıyor.  (H,o,w, ,a,r,e, ,y,o,u, ,d,o,i,n,g, ,t,o,d,a,y,?)
+            
+            var str = "How are you doing today?";  
+            var res = str.split(" ",3); // 3 kelime için yapıyor. (How,are,you)
+            
+            var str = "How are you doing today?";  
+            var res = str.split("o");   // 'o' ları virgülle değiştiriyor. (H,w are y,u d,ing t,day?)
+
+            DATE.PARSE("March 22,2016")  // Kullanım Koşulları Aşağıdaki gibidir.
+
+            var d = new Date("03/25/2015");
+            var d = new Date("2015/03/25");
+            var d = new Date("Mar 25 2015"); MMM DD YYYY
+            
+            var d = new Date("January 25 2015");
+            var d = new Date("Jan 25 2015");
+
+        */
+
+        // Convensions (dönüşümler)
+        var sayı = 123123;
+        var metin = sayi.toString();
+
+        var tamSayı = parseInt("123");
+        var ondalıklıSayı = parseFloat("123.44");
+
+        // Bildiğimiz try-catch
+        try {
+
+        } catch (e) {
+
+        } finally {
+
+        }
+
+
+    </script>
+
+    <script>
+        debugger;
+
+        // Önce fonksiyonu çağır.
+        // Test içindeki deneme sadece o fonksiyon için geçerli. Bu yüzden denemenin sonucunu başka bir script'de çağıramayız ve bundan patladığı içinde altındakilere erişemeyiz.
+        // Ama fonksiyon içindeki global tanımladığımız değişken varsa onu direk çağırdığımız gelir.   test();
+        //                                                                                             alert(garipŞey);
+        //test();
+        //alert(deneme);
+        //alert(garipŞey);
+    </script>
+    <button onclick="alert('Element içine yazdığım ilk JS kodu')">Tıkla Beni</button> <!-- Alert messagebox'la aynı -->
+    <input type="button" value="Tıkla Beni" onclick="alert('input element onclick')" />
+</body>
+</html>

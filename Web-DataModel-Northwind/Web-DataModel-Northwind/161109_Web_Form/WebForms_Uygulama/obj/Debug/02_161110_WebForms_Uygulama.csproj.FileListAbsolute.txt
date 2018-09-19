@@ -1,0 +1,14 @@
+C:\Users\BA\Desktop\Bilge Adam\161109_\161109_Web_Form\WebForms_Uygulama\bin\WebForms_Uygulama.dll.config
+C:\Users\BA\Desktop\Bilge Adam\161109_\161109_Web_Form\WebForms_Uygulama\bin\WebForms_Uygulama.dll
+C:\Users\BA\Desktop\Bilge Adam\161109_\161109_Web_Form\WebForms_Uygulama\bin\WebForms_Uygulama.pdb
+C:\Users\BA\Desktop\Bilge Adam\161109_\161109_Web_Form\WebForms_Uygulama\obj\Debug\02_161110_WebForms_Uygulama.csprojResolveAssemblyReference.cache
+C:\Users\BA\Desktop\Bilge Adam\161109_\161109_Web_Form\WebForms_Uygulama\obj\Debug\WebForms_Uygulama.dll
+C:\Users\BA\Desktop\Bilge Adam\161109_\161109_Web_Form\WebForms_Uygulama\obj\Debug\WebForms_Uygulama.pdb
+C:\Users\BA\Desktop\Bilge Adam\161109_\161109_Web_Form\WebForms_Uygulama\bin\EntityFramework.dll
+C:\Users\BA\Desktop\Bilge Adam\161109_\161109_Web_Form\WebForms_Uygulama\bin\EntityFramework.SqlServer.dll
+C:\Users\BA\Desktop\Bilge Adam\161109_\161109_Web_Form\WebForms_Uygulama\bin\EntityFramework.xml
+C:\Users\BA\Desktop\Bilge Adam\161109_\161109_Web_Form\WebForms_Uygulama\bin\EntityFramework.SqlServer.xml
+C:\Users\Ayça\Desktop\Bilge Adam\drive-download-20161214T124635Z\161109_\161109_\161109_Web_Form\WebForms_Uygulama\obj\Debug\02_161110_WebForms_Uygulama.csprojResolveAssemblyReference.cache
+C:\Users\Ayça\Desktop\Bilge Adam\drive-download-20161214T124635Z\161109_\161109_\161109_Web_Form\WebForms_Uygulama\obj\Debug\02_161110_WebForms_Uygulama.csproj.CoreCompileInputs.cache
+C:\Users\Ayça\Desktop\Bilge Adam\drive-download-20161214T124635Z\161109_\161109_\161109_Web_Form\WebForms_Uygulama\obj\Debug\WebForms_Uygulama.dll
+C:\Users\Ayça\Desktop\Bilge Adam\drive-download-20161214T124635Z\161109_\161109_\161109_Web_Form\WebForms_Uygulama\obj\Debug\WebForms_Uygulama.pdb

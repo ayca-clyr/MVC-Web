@@ -1,0 +1,42 @@
+﻿@model List<MhrsWeb.Doktor>
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+
+
+<form action="@Url.Action("Index","RandevuSaati")" method="POST">
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>@Html.Label("Doktor Adı Soyadı")</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+
+        <div class="form-group">
+            
+            <select name="Id" id="Id" class="form-control">
+                @foreach (var item in Model)
+                {
+                    <option value="@item.Id">@item.FullName</option>
+                }
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <a href="@Url.Action("Index","Home")" class="btn btn-default"><< Geri Dön</a>
+            <input type="submit" value="Tarih/Saat Güncelle" class="btn btn-primary" />
+
+        </div>
+    </div>
+</form>
+        
+
+
+
+
+    

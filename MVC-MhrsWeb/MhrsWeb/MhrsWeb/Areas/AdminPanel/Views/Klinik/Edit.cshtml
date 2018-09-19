@@ -1,0 +1,28 @@
+﻿@model MhrsWeb.Klinik
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="form-horizontal">
+        <h4>Klinik/Uzmanlık Güncelle</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <div class="form-group">
+            @Html.Label("Klinik/Uzmanlık Adı")
+            <input type="text" name="Name" id="Name" value="@Model.Name" class="form-control" />
+        </div>
+
+
+
+        <div class="form-group">
+            @Html.ActionLink("<< Geri Dön", "Index", "Klinik", new { @class = "btn btn-default" })
+            <input type="submit" value="Güncelle" class="btn btn-primary" />
+        </div>
+    </div>
+}

@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hakkımda</title>
+    <style>
+        #container {
+            /*border:1px solid black;*/
+            margin: -8px;
+        }
+
+        nav {
+            /*border:1px solid black;*/
+            padding: 2%;
+            box-sizing: border-box;
+            text-align: left;
+            background-color: black;
+            color: white;
+
+        }
+
+        .navItem:nth-child(1) {
+            float: left;
+            font-size:45px;
+            font-family:'Edwardian Script ITC';
+            margin-top:-10px;
+        }
+        .navItem:nth-child(7) {
+            float: right;
+            
+        }
+        
+        .navItem:nth-child(8) {
+            float: right;
+           
+        }
+
+        .navItem { /* Class isimlerine . ile    id olanlarada # ile erişiyoruz. */
+            display: inline; /*Yan yana yazdırıyor. Anasayfa-Hakkımda-vs...*/ /*Araştır*/
+            background-size: cover;
+            color: white;
+            
+           
+         
+        }
+
+            .navItem a {
+                text-decoration: none;
+                color: dimgray;
+                padding: 0.5%; /*İç Boşluk*/
+                box-sizing: border-box;
+                transition: all 0.3s ease;
+                font-size:12px;
+                margin-right:10px;
+              
+            }
+
+                .navItem a:hover {
+                    color: red;
+                }
+
+        #myName {
+            float:left;
+            font-size: 35px;
+            font-style: italic;
+           
+        }
+
+
+        #content {
+            background-image: url(/img/web-yazilim.jpg);
+            background-size: cover;
+            height: 550px;
+            padding-top: 150px;
+            box-sizing: border-box;
+        }
+
+        section {
+            background-color: white;
+            height: 400px;
+            margin: 0 25%;
+            width: 800px;
+        }
+
+        figure {
+            width: 50%;
+            float: left;
+            margin: 0;
+        }
+
+            figure img {
+                width: 100%;
+                /*height:400px;*/
+            }
+
+        article {
+            width: 50%;
+            float: left;
+            padding: 6%;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            color: #0000FF;
+        }
+
+            article span:nth-child(1) {
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            article span:nth-child(2) {
+                font-size: 15px;
+                font-weight: bold;
+            }
+
+        .meInfoHeader {
+            font-weight: bold;
+        }
+
+        .meInfo {
+            font-style: italic;
+        }
+
+            .meInfo a {
+                text-decoration: none; /*Alt yazı sildi. */
+                color: #0000FF;
+            }
+
+        footer {
+            background-color: white;
+            height: 300px;
+            /*margin: 0 25%;*/
+            width: 300px;
+            float:left;
+            margin-left:25px;
+           
+        }
+
+        .facebook, .linkedin, .instagram, .twitter, .googlePlus {
+            width: 25px;
+            height: 25px;
+            margin: 5px;
+            display: inline-block;
+            background-size: 100% 100%;
+            transition: all 1s ease;
+            float:left;
+        }
+
+            .facebook:hover, .linkedin:hover, .instagram:hover, .twitter:hover, .googlePlus:hover {
+                transform: rotate(-30deg);
+                cursor: pointer;
+                width:20px;
+                height:20px;
+            }
+
+        .facebook {
+          
+            background-image: url(/img/9.png);
+        }
+
+        .linkedin {
+            background-image: url(/img/11.png);
+            
+        }
+
+        .instagram {
+            background-image: url(/img/12.png);
+         
+        }
+
+        .twitter {
+            background-image: url(/img/10.png);
+       
+        }
+
+        .googlePlus {
+            background-image: url('img/13.png');
+           
+        }
+        .yazi{
+            border:1px solid rgba(219, 233, 233, 0.79);
+            margin-left:40px;
+            margin-right:40px;
+        }
+     
+        .header a{
+            font-size:20px;
+            color:#425795;
+            list-style-type:none;
+            text-decoration:none;
+        }
+        
+      
+       .header a:hover{
+           color:black;
+            text-decoration-style:none;
+       
+       }
+    
+        aside ul li{
+         text-decoration:none;   
+        }
+   
+      
+
+        .contactInput {
+            width: 100%;
+            margin: 20px 0 20px 0;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 20px 0 20px 0;
+            border: 1px solid #0000FF;
+        }
+            /* Aynı isi buralar bile o zaman name'sine yani value'sine kadar devam et. Ayırt etmek için. Birden çok submit varsa yani.*/
+            .contactInput:focus {
+                outline: none;
+                box-shadow: 5px 5px 50px 3px #0000FF; /* Araştır Gölgelendirme*/
+            }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <div class="navItem" style="color:white"> <b>
+    FacePress
+</b>
+
+
+    <img src=/img/0_93f31_95c68a17_L.png
+         width="10" height="10" />
+
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="navItem"><a href="ABOUT THİS BLOG.html" style="color:white"> ABOUT THİS BLOG&nbsp;&nbsp;&nbsp; /</a></div> <!-- Stillendirme amaçlı.-->
+            <div class="navItem"><a href="TWİTTER.html" style="color:white">TWİTTER&nbsp;&nbsp;&nbsp;/</a></div>
+            <div class="navItem"><a href="FACEBOOK.html" style="color:white">FACEBOOK&nbsp;&nbsp;&nbsp;/</a></div>
+            <div class="navItem"><a href="GOOGLE.html" style="color:white">GOOGLE+&nbsp;&nbsp;&nbsp;/</a></div>
+            <div class="navItem"><a href="RSS.html" style="color:white">RSS</a></div>
+            <div class="navItem"> <input type="button" value="LOG IN"/> &nbsp;</div>
+            <div class="navItem">
+                <img src="img/loginn.png"  width="25" height="25" />&nbsp;&nbsp;&nbsp;</div> 
+           
+
+        </nav>
+        <br />
+        <br />
+        <div class="yazi">
+            <pre style="font-family:'Comic Sans MS'">       Welcome to FacePress - the simplest way for everyone to publish, collect and share content.                                                                                                                   <img src=/img/carpi.png />         
+       You can create your collection efforttessly by postting content or followin active users.It's the best place where creators and bored  people meet 
+            </pre>
+        </div>
+
+        <aside>
+            <ul>
+                <br />
+                <li class="header"><input type="text"  placeholder="Type your search and hit enter" style="font-style:italic"/><b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;<a href="hdr">Timeline</a>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;<a href="#hdr">Following</a>&nbsp;&nbsp;&nbsp;  |&nbsp;&nbsp;&nbsp;  <a href="hdr">New </a>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; <a href="hdr">Popular</a></b></li>
+                <br />
+                <li>
+
+                    &nbsp;  <img src="img/3.png" />    &nbsp; My timeline </li>
+                <li>
+                    <img src="img/1.png" />&nbsp;&nbsp;Following</li>
+                <li>
+                    &nbsp; <img src="img/2.png" />
+&nbsp;&nbsp;Followers</li>
+                <li>
+                    &nbsp;     <img src="img/4.png" />
+&nbsp;&nbsp;Settings</li>
+                <li>
+                    &nbsp;  <img src="img/5.png" />
+                    &nbsp;&nbsp;My profile</li>
+                <li>
+                    &nbsp; <img src="img/6.png" />
+                    &nbsp;&nbsp;My added posts</li>
+                <li>
+                    &nbsp;  <img src="img/7.png" />
+&nbsp;&nbsp;My favories</li>
+                <li>
+                    &nbsp;  <img src="img/8.png" />
+                   &nbsp;&nbsp;Submit post</li>
+                
+            </ul>
+            <footer>
+                <div class="linkedin"></div>
+                <div class="facebook"></div>
+                <div class="twitter"></div>
+                <div class="googlePlus"></div>
+                <div class="instagram"></div>
+            </footer>
+        </aside>
+        <header class="otherHeader"></header>
+        <section class="otherSection">
+            
+        </section>
+       
+
+    </div>
+</body>
+</html>

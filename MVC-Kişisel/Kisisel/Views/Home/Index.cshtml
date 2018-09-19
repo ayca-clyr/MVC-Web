@@ -1,0 +1,375 @@
+﻿@model Kisisel.Models.PageModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>SpirIT 2.0</title>
+    <link rel="stylesheet" href="~/Assets/css/color-1.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Inconsolata" rel="stylesheet">
+    <link href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!--Switcher-->
+    <div class="style-switcher">
+        <span class="style-switcher__control"></span>
+        <div class="style-switcher__list">
+            <a class="style-switcher__link style-switcher__link--color"></a>
+            <a class="style-switcher__link style-switcher__link--mono"></a>
+        </div>
+    </div>
+    <!--Switcher-->
+    <!--Main menu-->
+    <div class="menu">
+        <div class="container">
+            <div class="row">
+                <div class="menu__wrapper d-none d-lg-block col-md-12">
+                    <nav class="">
+                        <ul>
+                            <li><a href="#hello">Kimim_Ben</a></li>
+                            <li><a href="#resume">Egitim</a></li>
+                            <li><a href="#work">İş_Tecrübesi</a></li>
+                            <li><a href="#skill">Yetenekler</a></li>
+                            <li><a href="#portfolio">Projeler</a></li>
+                            <li><a href="#contact">Iletisim</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="menu__wrapper col-md-12 d-lg-none">
+                    <button type="button" class="menu__mobile-button">
+                        <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Main menu-->
+    <!-- Mobile menu -->
+    <div class="mobile-menu d-lg-none">
+        <div class="container">
+            <div class="mobile-menu__close">
+                <span><i class="mdi mdi-close" aria-hidden="true"></i></span>
+            </div>
+            <nav class="mobile-menu__wrapper">
+                <ul>
+                    <li><a href="#hello">Hello</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- Mobile menu -->
+    <!--Header-->
+    <header class="main-header" style="background-image: url(@Model.profilImage.ImgUrl)">
+        <div class="container">
+            <div class="row personal-profile">
+                <div class="col-md-4 personal-profile__avatar">
+                    <img class="" src="@Model.profilImage.ImgUrl" alt="avatar">
+                </div>
+                <div class="col-md-8">
+                    <p class="personal-profile__name">@string.Format(Model.people.FullName + "_")</p>
+                    <p class="personal-profile__work">@Model.people.Title</p>
+                    <div class="personal-profile__contacts">
+                        <dl class="contact-list contact-list__opacity-titles">
+                            <dt>Yaş:</dt>
+                            <dd>@(DateTime.Now.Year - Model.people.Age.Year)</dd>
+                            <dt>Telefon:</dt>
+                            <dd>@Model.people.Phone</dd>
+                            <dt>Email:</dt>
+                            <dd>@Model.people.Email</dd>
+                            <dt>Adres:</dt>
+                            <dd>@Html.Raw(Model.people.Address)</dd>
+                        </dl>
+                    </div>
+                    <p class="personal-profile__social">
+                        @{
+                            foreach (var item in Model.people.Socials)
+                            {
+                                <a href="@item.Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                                <a href="@item.Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                                <a href="@item.Linkedin" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                                <a href="@item.GitHub" target="_blank"><i class="fa fa-github"></i></a>
+                            }
+                        }
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Header-->
+    <!--Hello-->
+    <section id="hello" class="container section">
+        <div class="row">
+            <div class="col-md-10">
+                <h2 id="hello_header" class="section__title">Selam_</h2>
+                <p class="section__description">Sinan Ben. Bilgisayar MÜHENDİSİYİM.Oyun oynamak hobimdir. Şimdilik bu kadar :)
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--Hello-->
+    <hr>
+    <!--Resume-->
+    <section id="resume" class="container section">
+        <div class="row">
+            <div class="col-md-10">
+                <h2 id="resume_header" class="section__title">Eğitim_</h2>
+                <p class="section__description">
+                    Bu alanda eğitim hayatımla ilgili bilgileri bulacaksınız.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 section__resume resume-list">
+                <h3 class="resume-list_title">egitim</h3>
+
+                @{ foreach (var item in Model.people.Educations)
+                    {
+                        <div class="resume-list__block">
+                            <p class="resume-list__block-title">@item.Name </p>
+                            <p class="resume-list__block-date">@item.DateOfStart - @item.DateOfEnd</p>
+                            <p>
+                                @item.Branch
+                            </p>
+                        </div>
+                    }
+                }
+
+            </div>
+        </div>
+        <div id="work" class="row">
+            <div class="col-md-10">
+                <h2 id="resume_header" class="section__title">İş Tecrübeleri_</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 section__resume resume-list">
+                <h3 class="resume-list_title">is tecrubeleri</h3>
+
+                @{
+                    foreach (var item in Model.people.Works)
+                    {
+                        <div class="resume-list__block">
+                            <p class="resume-list__block-title">@item.Name</p>
+                            <p class="resume-list__block-date">@item.DateOfStart - @item.DateOfEnd</p>
+                            <p>
+                                @item.Branch
+                            </p>
+                        </div>
+                    }
+                }
+
+            </div>
+        </div>
+        <div id="skill" class="row section__resume progress-list js-progress-list">
+            <div class="col-md-12">
+                <h3 class="progress-list__title">genel yetenekler</h3>
+            </div>
+
+            @{
+                foreach (var item in Model.people.Skills)
+                {
+                    <div class="col-md-5 mr-auto">
+                        <div class="progress-list__skill">
+                            <p>
+                                <span class="progress-list__skill-title">@item.Name</span>
+                                <span class="progress-list__skill-value">@string.Format(item.Grade + "%")</span>
+                            </p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="@item.Grade.ToString()" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+
+        </div>
+    </section>
+    <!--Resume-->
+    <!--Portfolio-->
+    <section id="portfolio" class="container section">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 id="portfolio_header" class="section__title">Projelerim_</h2>
+            </div>
+        </div>
+        <div class="row portfolio-menu">
+            <div class="col-md-12">
+                <nav>
+                    <ul>
+                        <li><a href="" data-portfolio-target-tag="all">hepsi</a></li>
+
+                        @{
+                            foreach (var item in Model.categoryList)
+                            {
+                                <li><a href="" data-portfolio-target-tag="@item.Id">@item.Name</a></li>
+                            }
+                        }
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="portfolio-cards">
+
+            @{
+                foreach (var item in Model.people.Projects)
+                {
+                    <div class="row project-card" data-toggle="modal" data-target="#@item.Id" data-portfolio-tag="@item.CategoryId">
+                        <div class="col-md-6 col-lg-5 project-card__img">
+                            <img class="" src="@item.Image.ImgUrl" alt="project-img">
+                        </div>
+                        <div class="col-md-6 col-lg-7 project-card__info">
+                            <h3 class="project-card__title">@item.Title  </h3>
+                            <p class="project-card__description">
+                                @item.Description
+                            </p>
+                            <p class="project-card__stack">Kullanılan Teknolojiler:</p>
+                            <ul class="tags">
+                                @{
+                                    foreach (var item2 in item.Project_Technologies)
+                                    {
+                                        <li>@item2.Technology.Name</li>
+                                    }
+                                }
+                            </ul>
+                            <a href="@item.Link" class="project-card__link">Projeye gitmek için Tıklayınız</a>
+                        </div>
+                    </div>
+                                    }
+            }
+
+
+        </div>
+    </section>
+    <!--Portfolio-->
+    <!--Contact-->
+    <div class="background" style="background-image: url()">
+        <div id="contact" class="container section">
+            <div class="row">
+                <div class="col-md-12">
+                    <p id="contacts_header" class="section__title">Iletisim_</p>
+                </div>
+            </div>
+            <div class="row contacts">
+                <div class="col-md-5 col-lg-4">
+                    <div class="contacts__list">
+                        <dl class="contact-list">
+                            <dt>Telefon:</dt>
+                            <dd>@Model.people.Phone</dd>
+                            <dt>Email:</dt>
+                            <dd>@Model.people.Email</dd>
+                        </dl>
+                    </div>
+                    <div class="contacts__social">
+                        <ul>
+                            @{
+                                foreach (var item in Model.people.Socials)
+                                {
+                                    <li><a href="@item.Facebook">Facebook</a></li>
+                                    <li><a href="@item.Instagram">Instagram</a></li>
+                                    <li><a href="@item.Linkedin">Linkedin</a></li>
+                                    <li><a href="@item.GitHub">GitHub</a></li>
+                                }
+                            }
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-7 col-lg-5">
+                    <div class="contacts__form">
+                        <p class="contacts__form-title">Bana bir mektup yaz_</p>
+                        <form class="js-form">
+                            <div class="form-group">
+                                <input class="form-field js-field-name" type="text" placeholder="Ad Soyad" required="">
+                                <span class="form-validation"></span>
+                                <span class="form-invalid-icon"><i class="mdi mdi-close" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-field js-field-email" type="email" placeholder="Email adresiniz" required="">
+                                <span class="form-validation"></span>
+                                <span class="form-invalid-icon"><i class="mdi mdi-close" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-field js-field-message" placeholder="Buraya mesajınızı yazın" required=""></textarea>
+                                <span class="form-validation"></span>
+                                <span class="form-invalid-icon"><i class="mdi mdi-close" aria-hidden="true"></i></span>
+                            </div>
+                            <button class="site-btn site-btn--form" type="submit" value="Send">GÖNDER</button>
+                        </form>
+                    </div>
+                    <div class="footer">
+                        <p>© 2017 - Ayça CALAYIR</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Contact-->
+    <!-- Portfolio Modal -->
+    @{
+        foreach (var item in Model.people.Projects)
+        {
+            <div class="modal fade portfolio-modal" id="@item.Id" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
+                            <p class="portfolio-modal__title">@item.Title</p>
+                            <img class="portfolio-modal__img" src="@item.Image.ImgUrl" alt="modal_img">
+                            <p class="portfolio-modal__description">
+                                @item.Description
+                            </p>
+                            <div class="portfolio-modal__link">
+                                <a href="">@item.Link</a>
+                            </div>
+                            <div class="portfolio-modal__stack">
+                                <p class="portfolio-modal__stack-title">Kullanılan Teknolojiler:</p>
+                                <ul class="tags">
+                                    @{
+                                        foreach (var item2 in item.Project_Technologies)
+                                        {
+                                            <li>@item2.Technology.Name</li>
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                                        }
+    }
+    <!-- Portfolio Modal -->
+    <script src="~/Assets/js/jquery-2.2.4.min-1.js"></script>
+    <script src="~/Assets/js/popper.min-1.js"></script>
+    <script src="~/Assets/js/bootstrap.min-1.js"></script>
+    <script src="~/Assets/js/menu-1.js"></script>
+    <script src="~/Assets/js/jquery.waypoints-1.js"></script>
+    <script src="~/Assets/js/progress-list-1.js"></script>
+    <script src="~/Assets/js/section-1.js"></script>
+    <script src="~/Assets/js/portfolio-filter-1.js"></script>
+    <script src="~/Assets/js/slider-carousel-1.js"></script>
+    <script src="~/Assets/js/mobile-menu-1.js"></script>
+    <script src="~/Assets/js/contacts-1.js"></script>
+    <script src="~/Assets/js/mbclicker.min-1.js"></script>
+    <script src="~/Assets/js/site-btn-1.js"></script>
+    <script src="~/Assets/js/style-switcher-1.js"></script>
+</body>
+</html>

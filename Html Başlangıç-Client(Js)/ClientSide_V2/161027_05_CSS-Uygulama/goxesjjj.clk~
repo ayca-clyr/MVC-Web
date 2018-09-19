@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ayça Calayır</title>
+
+    <style>
+        #container{
+            /*border:1px solid black;*/
+            margin:-8px;   
+        }
+        nav{
+            /*border:1px solid black;*/
+            padding:2%;
+            box-sizing: border-box;
+            text-align:right;
+        }
+
+        .navItem{ /* Class isimlerine . ile    id olanlarada # ile erişiyoruz. */
+            display:inline;  /*Yan yana yazdırıyor. Anasayfa-Hakkımda-vs...*/  /*Araştır*/
+        }
+        .navItem a{
+            text-decoration:none;
+            color:dimgray;
+            padding:1%;  /*İç Boşluk*/
+            box-sizing:border-box;
+        }
+        .navItem a :hover{
+               color:#bababa;    
+        }
+        #myName{
+            text-align:left;
+            font-size:35px;
+        }
+
+
+        #content{
+            background-image: url(img/web-yazilim.jpg);
+            background-size:cover;
+            height:550px;
+            padding-top:150px;
+            box-sizing:border-box;
+        }
+        section{
+            background-color:white;
+            height:400px;
+            margin:0 25%;
+            width:800px;
+        }
+
+        figure{
+            width:50%;
+            float:left;
+            margin:0;
+
+        }
+        figure img{
+            width:100%;
+            /*height:400px;*/
+        }
+        article{
+            width: 50%;
+            float:left;
+            padding:6%;
+            box-sizing:border-box;
+
+            font-family:Arial, sans-serif;
+            color:#0000FF;
+        }
+
+       
+        /*article  span    --- article'ın altındaki bütün spanlar*/
+        /*article > span    --- article'ın hemen altındaki spanlar*/
+         /*article span:first-child   ---article'ın altındaki ilk span  */
+         article span:nth-child(1){
+             font-size:30px;
+             font-weight:bold;
+         }
+         article span:nth-child(2){
+             font-size:15px;
+             font-weight:bold;
+         }
+        .meInfoHeader{
+            font-weight:bold;
+        }
+        .meInfo {
+            font-style: italic;
+        }
+        footer{
+   
+         background-color:#0000FF;
+            height:100px;
+            margin:0 25%;
+            width:800px;
+        }
+        .facebook,.linkedin,.instagram,.twitter,.googlePlus{
+            width:32px;
+            height:32px;
+            margin:10px;
+            display:inline-block;
+            background-size:100% 100%
+            
+        }
+        
+        .linkedin {
+            background-image: url('img/instagram.png');
+        }
+         .instagram {
+            background-image: url('img/linkedin.png');
+        }
+         .facebook {
+            background-image: url('img/facebook.png');
+        }
+         .twitter {
+            background-image: url('img/twitter.png');
+        } 
+         .googlePlus {
+            background-image: url('img/googleplus.png');
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <div id="myName"> <b>Ayça Calayır</b></div>
+
+            <div class="navItem"><a href="Home.html">ANASAYFA</a></div> <!-- Stillendirme amaçlı.-->
+            <div class="navItem"><a href="Home.html">HAKKIMDA</a></div>
+            <div class="navItem"><a href="Home.html">PROJELERİM</a></div>
+            <div class="navItem"><a href="Home.html">İLETİŞİM</a></div>
+        </nav>
+        <!--<header></header>-->
+        <div id="content">
+            <section>
+                <figure>                    
+                    <img src="img/ayca.jpg" />
+                </figure>
+                <article>
+                    <span>Ayça Calayır</span> <br />
+                    <span>SOFTWARE TRAINER</span> <br />
+                    <br />
+                    <span class="meInfoHeader">Phone : </span> <br />
+                    <span class ="meInfo">+90 537 360 20 92</span> <br />
+                    <br />
+                    <span class="meInfoHeader">Email</span><br />
+                    <span class="meInfo">ayca.clyr@gmail.com</span><br />
+                    <br />
+                    <span class="meInfoHeader">Address : </span><br />
+                    <span class="meInfo">
+                        Reşit Paşa Caddesi.Önder sokak No 8/3<br />
+                        Avcılar/ ISTANBUL
+                    </span><br />
+                    <br />
+                    <span class="meInfoHeader">Date of Birth : </span><br />
+                    <span class ="meInfo">October 15nd,1992 </span><br />
+                </article>
+            </section>
+        </div>
+        <footer>
+            <div class="linkedin"></div>
+            <div class="facebook"></div>
+            <div class="twitter"></div>
+            <div class="googlePlus"></div>
+            <div class="instagram"></div>
+        </footer>
+
+    </div>
+</body>
+</html>

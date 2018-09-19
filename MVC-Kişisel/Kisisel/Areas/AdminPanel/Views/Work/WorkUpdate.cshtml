@@ -1,0 +1,22 @@
+﻿@model Entities.Work
+@{
+    ViewBag.Title = "WorkUpdate";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+
+<form action="@Url.Action("WorkUpdate","Work",new { Id = Model.Id })" method="post" enctype="multipart/form-data" ">
+    <span>Eğitim Güncelle</span>
+
+    <div class="x_panel" style="margin-top:15px;">
+        <input type="text" id="name" class="form-control" name="Name" placeholder="İş Adı Giriniz.." value="@Model.Name">
+        <input type="text" id="branch" class="form-control" name="Branch" placeholder="Görev Giriniz.." value="@Model.Branch">
+        <input type="text" id="dateofstart" class="form-control" name="DateOfStart" placeholder="Başlangıç Tarihi.." value="@Model.DateOfStart">
+        <input type="text" id="dateofend" class="form-control" name="DateOfEnd" placeholder="Bitiş Tarihi.." value="@Model.DateOfEnd">
+    </div>
+
+    <div class="form-group">
+        <a href="@Url.Action("Index","Home")" class="btn btn-default pull-right">IPTAL</a>
+        <input type="submit" value="Güncelle" class="btn btn-primary pull-right" />
+    </div>
+</form>
+

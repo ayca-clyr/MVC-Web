@@ -1,0 +1,51 @@
+﻿@model Kisisel.Areas.AdminPanel.Models.ProjectAddModel
+@{
+    ViewBag.Title = "ProjectAdd";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+
+<form action="@Url.Action("ProjectAdd","Project")" method="post" enctype="multipart/form-data">
+
+
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Proje Adı Giriniz.." name="Title">
+    </div>
+
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Proje Açıklaması Giriniz.." name="Description">
+    </div>
+
+    <div class="form-group">
+        <select class="form-control" name="CategoryId">
+            <option selected="selected" disabled>Kategori Seçiniz</option>
+            @foreach (var item in Model.categoryList)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <select class="select2_multiple form-control" multiple="multiple" name="TechnologyId">
+            <option disabled>Projede Kullanılan Teknolojileri Seçiniz</option>
+            @foreach (var item in Model.technologyList)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Proje Linki Giriniz.." name="Link">
+    </div>
+
+    <div class="form-group">
+        <input type="file" class="form-control" name="File" />
+    </div>
+
+
+
+    <input type="submit" class="btn btn-success pull-right" value="Proje Ekle" />
+
+
+</form>

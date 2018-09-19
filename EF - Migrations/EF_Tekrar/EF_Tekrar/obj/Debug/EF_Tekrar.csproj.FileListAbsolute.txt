@@ -1,0 +1,14 @@
+c:\users\ba\documents\visual studio 2013\Projects\EF_Tekrar\EF_Tekrar\bin\Debug\EF_Tekrar.exe.config
+c:\users\ba\documents\visual studio 2013\Projects\EF_Tekrar\EF_Tekrar\bin\Debug\EF_Tekrar.exe
+c:\users\ba\documents\visual studio 2013\Projects\EF_Tekrar\EF_Tekrar\bin\Debug\EF_Tekrar.pdb
+c:\users\ba\documents\visual studio 2013\Projects\EF_Tekrar\EF_Tekrar\bin\Debug\EntityFramework.dll
+c:\users\ba\documents\visual studio 2013\Projects\EF_Tekrar\EF_Tekrar\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\ba\documents\visual studio 2013\Projects\EF_Tekrar\EF_Tekrar\bin\Debug\EntityFramework.xml
+c:\users\ba\documents\visual studio 2013\Projects\EF_Tekrar\EF_Tekrar\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\ba\documents\visual studio 2013\Projects\EF_Tekrar\EF_Tekrar\obj\Debug\EF_Tekrar.csprojResolveAssemblyReference.cache
+c:\users\ba\documents\visual studio 2013\Projects\EF_Tekrar\EF_Tekrar\obj\Debug\EF_Tekrar.exe
+c:\users\ba\documents\visual studio 2013\Projects\EF_Tekrar\EF_Tekrar\obj\Debug\EF_Tekrar.pdb
+c:\users\ba\documents\visual studio 2013\Projects\EF_Tekrar\EF_Tekrar\obj\Debug\EF_Tekrar.Migrations.ilkDbOluşturma.resources
+c:\users\ba\documents\visual studio 2013\Projects\EF_Tekrar\EF_Tekrar\obj\Debug\EF_Tekrar.csproj.GenerateResource.Cache
+c:\users\ba\documents\visual studio 2013\Projects\EF_Tekrar\EF_Tekrar\obj\Debug\EF_Tekrar.Migrations.DogumTarihiEklendi.resources
+c:\users\ba\documents\visual studio 2013\Projects\EF_Tekrar\EF_Tekrar\obj\Debug\EF_Tekrar.Migrations.EmailEklendi.resources

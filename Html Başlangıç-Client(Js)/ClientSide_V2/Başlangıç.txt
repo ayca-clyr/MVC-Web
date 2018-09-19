@@ -1,0 +1,6 @@
+-Vs acýyoruz.
+-C# ta yeni solution açýyoruz ve web tarafýnda acýyoruz.
+-Wep sec
+-Emty seç diðer tiklaerýn hepsini kaldýr.
+-Projede Add de
+-HTLM page

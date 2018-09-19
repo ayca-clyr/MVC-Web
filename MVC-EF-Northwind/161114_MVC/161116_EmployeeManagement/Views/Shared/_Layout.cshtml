@@ -1,0 +1,62 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Employee Management</title>
+    <link href="~/assets/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body class="container">  @* Container : Sınırlandırma.*@
+    <header class="well">
+        <div class="row">
+            <h1 style="text-align:center" class="col-md-8">
+                Employee Management
+            </h1>
+
+            <div class="col-md-4">
+                
+                @* url : /Login/Index *@
+                @* url : ~/Login/Index *@
+               
+                  @*<span class="pull-right" style="font-weight:bold"> Hoş geldin XXX XXXX</span>*@<br />
+                  @*<a href="@Url.Action("LogOut","Login")" class="btn btn-danger pull-right">Çıkış</a>*@
+            
+                @*@Html.Action("LoginUser", "Home");*@
+                @* Model almıyorsa aşağıdaki gibi kullanılır.*@
+                @*@Html.Partial("LoginUser");*@
+                @{
+                    Html.RenderAction("LoginUser","Home");
+                }
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-3">
+              <ul class="list-group">
+                  <li class="list-group-item">
+                     <a href="/">Giriş</a>
+                  </li>
+                  <li class="list-group-item">
+                      <a href="/Department">Departmanlar</a>
+                  </li>
+                  <li class="list-group-item">
+                      <a href="/Employee">Çalışanlar</a>
+                  </li>
+              </ul>
+               
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-9">
+                @*Sayfa burda görüntülensin.*@
+                @RenderBody()  
+            </div>
+        </div>
+    </section>
+</body>
+</html>

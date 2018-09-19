@@ -1,0 +1,28 @@
+﻿@model MhrsWeb.Command
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm()) 
+{
+    
+    
+<div class="form-horizontal">
+    <h4>Yönetici Ekle</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.Label("Yönetici Adı")
+        <input type="text" name="Name" id="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        @Html.ActionLink("<< Geri Dön", "Index", "Command", new { @class = "btn btn-default" })
+        <input type="submit" value="Kaydet" class="btn btn-success" />
+    </div>
+</div>
+
+}
+

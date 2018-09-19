@@ -1,0 +1,25 @@
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161108_BootstrapJS_Uygulama\bin\161108_BootstrapJS_Uygulama.dll.config
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161108_BootstrapJS_Uygulama\bin\161108_BootstrapJS_Uygulama.dll
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161108_BootstrapJS_Uygulama\bin\161108_BootstrapJS_Uygulama.pdb
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161108_BootstrapJS_Uygulama\obj\Debug\161108_BootstrapJS_Uygulama.csprojResolveAssemblyReference.cache
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161108_BootstrapJS_Uygulama\obj\Debug\161108_BootstrapJS_Uygulama.dll
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161108_BootstrapJS_Uygulama\obj\Debug\161108_BootstrapJS_Uygulama.pdb
+C:\Users\Ayça\Downloads\161108_ClientSide_V2\ClientSide_V2\161108_BootstrapJS_Uygulama\bin\161108_BootstrapJS_Uygulama.dll.config
+C:\Users\Ayça\Downloads\161108_ClientSide_V2\ClientSide_V2\161108_BootstrapJS_Uygulama\bin\161108_BootstrapJS_Uygulama.dll
+C:\Users\Ayça\Downloads\161108_ClientSide_V2\ClientSide_V2\161108_BootstrapJS_Uygulama\bin\161108_BootstrapJS_Uygulama.pdb
+C:\Users\Ayça\Downloads\161108_ClientSide_V2\ClientSide_V2\161108_BootstrapJS_Uygulama\obj\Debug\161108_BootstrapJS_Uygulama.csprojResolveAssemblyReference.cache
+C:\Users\Ayça\Downloads\161108_ClientSide_V2\ClientSide_V2\161108_BootstrapJS_Uygulama\obj\Debug\161108_BootstrapJS_Uygulama.dll
+C:\Users\Ayça\Downloads\161108_ClientSide_V2\ClientSide_V2\161108_BootstrapJS_Uygulama\obj\Debug\161108_BootstrapJS_Uygulama.pdb
+C:\Users\Ayça\Documents\Visual Studio 2015\Projects\161109_BootstrapJs_Jquery\161108_BootstrapJS_Uygulama\bin\161108_BootstrapJS_Uygulama.dll.config
+C:\Users\Ayça\Documents\Visual Studio 2015\Projects\161109_BootstrapJs_Jquery\161108_BootstrapJS_Uygulama\bin\161108_BootstrapJS_Uygulama.dll
+C:\Users\Ayça\Documents\Visual Studio 2015\Projects\161109_BootstrapJs_Jquery\161108_BootstrapJS_Uygulama\bin\161108_BootstrapJS_Uygulama.pdb
+C:\Users\Ayça\Documents\Visual Studio 2015\Projects\161109_BootstrapJs_Jquery\161108_BootstrapJS_Uygulama\obj\Debug\161108_BootstrapJS_Uygulama.csprojResolveAssemblyReference.cache
+C:\Users\Ayça\Documents\Visual Studio 2015\Projects\161109_BootstrapJs_Jquery\161108_BootstrapJS_Uygulama\obj\Debug\161108_BootstrapJS_Uygulama.dll
+C:\Users\Ayça\Documents\Visual Studio 2015\Projects\161109_BootstrapJs_Jquery\161108_BootstrapJS_Uygulama\obj\Debug\161108_BootstrapJS_Uygulama.pdb
+C:\Users\Ayça\Desktop\Proje Yedek\161109_BootstrapJs_Jquery\161108_BootstrapJS_Uygulama\bin\161108_BootstrapJS_Uygulama.dll.config
+C:\Users\Ayça\Desktop\Proje Yedek\161109_BootstrapJs_Jquery\161108_BootstrapJS_Uygulama\bin\161108_BootstrapJS_Uygulama.dll
+C:\Users\Ayça\Desktop\Proje Yedek\161109_BootstrapJs_Jquery\161108_BootstrapJS_Uygulama\bin\161108_BootstrapJS_Uygulama.pdb
+C:\Users\Ayça\Desktop\Proje Yedek\161109_BootstrapJs_Jquery\161108_BootstrapJS_Uygulama\obj\Debug\161108_BootstrapJS_Uygulama.csprojResolveAssemblyReference.cache
+C:\Users\Ayça\Desktop\Proje Yedek\161109_BootstrapJs_Jquery\161108_BootstrapJS_Uygulama\obj\Debug\161108_BootstrapJS_Uygulama.csproj.CoreCompileInputs.cache
+C:\Users\Ayça\Desktop\Proje Yedek\161109_BootstrapJs_Jquery\161108_BootstrapJS_Uygulama\obj\Debug\161108_BootstrapJS_Uygulama.dll
+C:\Users\Ayça\Desktop\Proje Yedek\161109_BootstrapJs_Jquery\161108_BootstrapJS_Uygulama\obj\Debug\161108_BootstrapJS_Uygulama.pdb

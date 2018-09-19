@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<!--Bunu kullanmalıdısın.-->
+<!--http://getbootstrap.com/css/-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Content içindeki bootstrap.css buraya koy -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap Intro</title>
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        .row {
+            border: 1px solid black;
+            margin-bottom: 15px;
+        }
+
+            .row > div {
+                border: 1px solid yellow;
+                height: 150px;
+                background-color: red;
+            }
+
+        .solMenu {
+            height: 400px !important;
+        }
+
+        .sagIcerik {
+            /*height: 400px !important;*/
+        }
+
+        .ortak {
+            background-color: wheat !important;
+        }
+
+        .ortakisim {
+            height: 300px;
+            border: 1px solid black;
+            background-color: green;
+        }
+
+        /*.col-md-3 Böylede çağırabiiriz.*/
+    </style>
+
+</head>
+<body>
+
+    <!-- Sitedeki kod CSS içindeki container. -->
+    <!--<div class="container-fluid" style="background-color:red; height:300px;">
+        ...
+    </div>-->
+    <!-- Toplamı yukardan başa 12 olunca bitiricek. O yüzden toplamları ve kalanları tamalarsın 4-4-4-4-6-2 -->
+    <!--<div class="container">
+        <div class="row">
+            <div class="col-md-6 ">.col-md-1</div>
+            <div class="col-md-6">.col-md-1</div>
+            <div class="col-md-6">.col-md-1</div>
+            <div class="col-md-6">.col-md-1</div>
+            <div class="col-md-6">.col-md-1</div>
+            <div class="col-md-6">.col-md-1</div>
+            <div class="col-md-6">.col-md-1</div>
+            <div class="col-md-6">.col-md-1</div>
+            <div class="col-md-6">.col-md-1</div>
+            <div class="col-md-6">.col-md-1</div>
+            <div class="col-md-4">.col-md-1</div>
+            <div class="col-md-8">.col-md-1</div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">.col-md-8</div>
+            <div class="col-md-4">.col-md-4</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4">.col-md-4</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">.col-md-6</div>
+            <div class="col-md-6">.col-md-6</div>
+        </div>
+    </div>-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">HEADER</div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3 solMenu ortak">NAVBAR</div>
+
+            <div class="col-md-9 sagIcerik ortak">
+                <div class="row">
+                    <div class="col-sm-4 ortakisim">1</div>
+                    <div class="col-sm-4 ortakisim">2</div>
+                    <div class="col-sm-4 ortakisim">3</div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">FOOTER</div>
+
+        </div>
+    </div>
+
+
+
+
+    <!--  Sıralama önemli jquery en üstte olmalı. Ayrıca Scriptsden boostrap ve jqery-1.9.1 i yapmış oluruz .-->
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+
+</body>
+</html>

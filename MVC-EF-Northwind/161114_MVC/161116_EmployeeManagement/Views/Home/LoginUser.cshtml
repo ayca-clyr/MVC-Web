@@ -1,0 +1,8 @@
+﻿@model _161116_EmployeeManagement.EF.Entities.Employee
+
+<div>
+    @* url : /Login/Index *@
+    @* url : ~/Login/Index *@
+    <span class="pull-right" style="font-weight:bold"> HOŞGELDİN @(Model.FirstName + " "+Model.LastName)</span><br />
+    <a href="@Url.Action("LogOut","Login")" class="btn btn-danger pull-right">Çıkış</a>
+</div>

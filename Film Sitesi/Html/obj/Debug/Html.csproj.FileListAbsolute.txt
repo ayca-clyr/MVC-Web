@@ -1,0 +1,67 @@
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\ApplicationInsights.config
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\roslyn\csc.exe
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\roslyn\System.Collections.Immutable.dll
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\roslyn\vbc.exe
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\roslyn\VBCSCompiler.exe
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\roslyn\VBCSCompiler.exe.config
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Html.dll.config
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Html.dll
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Html.pdb
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Microsoft.AI.Web.dll
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Microsoft.AI.WindowsServer.dll
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Microsoft.ApplicationInsights.dll
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Microsoft.AI.Web.xml
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Microsoft.AI.WindowsServer.xml
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Microsoft.ApplicationInsights.xml
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\obj\Debug\Html.csprojResolveAssemblyReference.cache
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\obj\Debug\Html.dll
+c:\users\ayça\documents\visual studio 2015\Projects\Html-Ödev\Html\obj\Debug\Html.pdb
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\ApplicationInsights.config
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\roslyn\csc.exe
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\roslyn\vbc.exe
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\roslyn\VBCSCompiler.exe
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Html.dll.config
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Html.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Html.pdb
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Microsoft.AI.Web.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Microsoft.AI.Web.xml
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\obj\Debug\Html.csprojResolveAssemblyReference.cache
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\obj\Debug\Html.csproj.CoreCompileInputs.cache
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\obj\Debug\Html.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Html-Ödev\Html\obj\Debug\Html.pdb

@@ -1,0 +1,208 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Panel | </title>
+    <!-- Bootstrap -->
+    <link href="~/Areas/AdminPanel/Assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="~/Areas/AdminPanel/Assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="~/Areas/AdminPanel/Assets/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="~/Areas/AdminPanel/Assets/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="~/Areas/AdminPanel/Assets/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="~/Areas/AdminPanel/Assets/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+    <!-- bootstrap-daterangepicker -->
+    <link href="~/Areas/AdminPanel/Assets/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="~/Areas/AdminPanel/Assets/build/css/custom.min.css" rel="stylesheet">
+    <!-- CK Editör -->
+    <script src="~/Areas/AdminPanel/Assets/ckeditor/ckeditor.js"></script>
+</head>
+<body class="nav-md">
+
+
+
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="@Url.Action("Index","Home")" class="site_title"><i class="fa fa-paw"></i> <span>Yönetim Paneli</span></a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <!-- menu profile quick info -->
+                    <!-- /menu profile quick info -->
+                    <br />
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a href="/AdminPanel/Home"><i class="active fa fa-home"></i> Ana Sayfa</a>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-server"></i> Kişisel Bilgiler <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="@Url.Action("Index","People")">Güncelle</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-server"></i> Eğitim Bilgileri <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="@Url.Action("Index","Education")">Listele / Sil</a></li>
+                                        <li><a href="@Url.Action("EducationAdd","Education")">Okul Ekle</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-server"></i> İş Bilgileri <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="@Url.Action("Index","Work")">Listele / Sil</a></li>
+                                        <li><a href="@Url.Action("WorkAdd","Work")">İş Ekle</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-server"></i> Projeler <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="@Url.Action("Index","Project")">Listele / Sil</a></li>
+                                        <li><a href="@Url.Action("ProjectAdd","Project")">Proje Ekle</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-server"></i> Kategoriler <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="@Url.Action("Index","Category")">Ekle / Güncelle / Sil</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-server"></i> Teknolojiler <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="@Url.Action("Index","Technology")">Ekle / Güncelle / Sil</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-server"></i> Beceriler <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="@Url.Action("Index","Skill")">Ekle / Güncelle / Sil</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-server"></i> Sosyal Ağlar <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="@Url.Action("Index","Social")">Listele / Sil</a></li>
+                                        <li><a href="@Url.Action("SocialAdd","Social")">Ağ Ekle</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /sidebar menu -->
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small">
+
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    Admin
+                                    <span class=" fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li><a href="@Url.Action("ChangePassword","Home")">Şifre Değiştir</a></li>
+                                    <li><a href="@Url.Action("Logout","Login")"><i class="fa fa-sign-out pull-right"></i>Çıkış Yap</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+
+                        @RenderBody()
+
+                    </div>
+                </div>
+            </div>
+            <!-- /page content -->
+            <!-- footer content -->
+            <footer>
+                <div class="pull-right">
+                    Copyright © 2017 Burak KAYA
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery -->
+    <script src="~/Areas/AdminPanel/Assets/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Areas/AdminPanel/Assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Areas/AdminPanel/Assets/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="~/Areas/AdminPanel/Assets/vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="~/Areas/AdminPanel/Assets/vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="~/Areas/AdminPanel/Assets/vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="~/Areas/AdminPanel/Assets/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="~/Areas/AdminPanel/Assets/vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="~/Areas/AdminPanel/Assets/vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="~/Areas/AdminPanel/Assets/vendors/Flot/jquery.flot.js"></script>
+    <script src="~/Areas/AdminPanel/Assets/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="~/Areas/AdminPanel/Assets/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="~/Areas/AdminPanel/Assets/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="~/Areas/AdminPanel/Assets/vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="~/Areas/AdminPanel/Assets/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="~/Areas/AdminPanel/Assets/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="~/Areas/AdminPanel/Assets/vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="~/Areas/AdminPanel/Assets/vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="~/Areas/AdminPanel/Assets/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="~/Areas/AdminPanel/Assets/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="~/Areas/AdminPanel/Assets/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="~/Areas/AdminPanel/Assets/vendors/moment/min/moment.min.js"></script>
+    <script src="~/Areas/AdminPanel/Assets/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="~/Areas/AdminPanel/Assets/build/js/custom.min.js"></script>
+    @RenderSection("javascript", false)
+</body>
+</html>

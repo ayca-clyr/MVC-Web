@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="İsim" />
+    <input type="text" id="surname" placeholder="Soyisim" />
+    <input type="text" id="title" placeholder="Ünvan" />
+    <br />
+    <br />
+    <input type="button" value="Kaydet" onclick="KişiGöster()" />
+
+    <script>
+
+
+        var kişiListesi = [];   // Bir bir array listesidir.
+
+        //function KişiGöster() {
+        //    kişi.Ad = document.getElementById("name").value;
+        //    kişi.Soyad = document.getElementById("surname").value;
+        //    kişi.Title = document.getElementById("title").value;
+        //    alert(kişi.Ad + " " + kişi.Soyad + " " + kişi.Title);
+
+        //}
+
+        //var kişi = { Ad: "", Soyad: "" };  // Bunu fonskiyon dışında yazarsak eklendikçe üstüne ekliyor en son değeri gösteriyor. Ama bunu fonksiyon içinde yazarsak bütün eklediklerimizi görürüz.
+
+        //function Kişi() {
+        //    this.Ad = "";  // null ama hiç birşey yazmazsak undefined olur.
+        //    this.Soyad = "";
+        //}
+
+        function Kişi(ad,soyad) {
+            this.Ad = ad;  // null ama hiç birşey yazmazsak undefined olur.
+            this.Soyad = soyad;
+        }
+
+        var Kitap = function () {
+            this.Ad = "";
+            this.yazar = "";
+        }
+
+        //function KişiGöster() {
+
+        //    //var kişi = { Ad: "", Soyad: "" };
+
+        //    var adText = document.getElementById("name");
+        //    var soyadText = document.getElementById("surname");
+        //    var ünvanText = document.getElementById("title");
+
+        //    kişi.Ad = adText.value;
+        //    kişi.Soyad = soyadText.value;
+        //    kişi.Title = ünvanText.value;
+
+        //    kişiListesi.push(kişi);
+
+        //    alert("Kişi Listesine Başarı ile Kaydedildi");
+        //    adText.value = "";
+        //    soyadText.value = "";
+        //    title.value = "";
+        //}
+
+        //function KişiGöster() {
+        //    
+        //    var kitap = new Kitap();
+        //    kitap.Ad = "Fareler ve İnsanlar";
+        //    kitap.yazar = "Can İsmail Ateş";
+
+        //    var adText = document.getElementById("name");
+        //    var soyadText = document.getElementById("surname");
+        //    var ünvanText = document.getElementById("title");
+
+        //    var biri = new Kişi();  
+        //    biri.Ad = adText.value;        // Kişi Class'ının property'si
+        //    biri.Soyad = soyadText.value;  // Kişi Class'ının property'si
+        //    biri.Title = ünvanText.value;  // Atama yapıyor. Üstte tanımlama yaptığımız için. Listede gözükür Consolda çağırdığımızda ama sınıfta gözükmez.
+        //    biri.Kitabı = kitap;  // Kitap diyede sınıf geliyor.
+
+        //    kişiListesi.push(biri),
+
+        //    alert("Kişi Listesine Başarı ile Kaydedildi.")
+
+        //    adText.value = "";
+        //    soyadText.value = "";
+        //    title.value = "";
+
+        //}
+
+        function KişiGöster() {
+            var adText = document.getElementById("name");
+               var soyadText = document.getElementById("surname");
+               var ünvanText = document.getElementById("title");
+
+               var biri = new Kişi(adText.value, soyadText.value)
+
+               var kitap = new Kitap();
+              kitap.Ad = "Fareler ve İnsanlar"; 
+              kitap.yazar = "Can İsmail Ateş";
+
+              biri.Title = ünvanText.value;  // Kişi Class'ından instance alınıp oluşturulan nesneye dinamik propery'si.
+              biri.Kitabı = kitap;          // Kişi Class'ından instance alınıp oluşturulan nesneye dinamik propery'si.
+
+              kişiListesi.push(biri);
+
+                adText.value = "";
+                soyadText.value = "";
+                title.value = "";
+        }
+
+
+    </script>
+
+
+</body>
+</html>

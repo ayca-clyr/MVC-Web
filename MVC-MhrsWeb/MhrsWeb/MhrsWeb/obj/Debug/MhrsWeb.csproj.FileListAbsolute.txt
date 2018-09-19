@@ -1,0 +1,52 @@
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\MhrsWeb.dll.config
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\MhrsWeb.dll
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\MhrsWeb.pdb
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\EntityFramework.dll
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\EntityFramework.SqlServer.dll
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\Newtonsoft.Json.dll
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Helpers.dll
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Mvc.dll
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Razor.dll
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Webpages.dll
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Webpages.Razor.dll
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\EntityFramework.xml
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\EntityFramework.SqlServer.xml
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\Newtonsoft.Json.xml
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Razor.xml
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Webpages.xml
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Webpages.Razor.xml
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Helpers.xml
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Mvc.xml
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\obj\Debug\MhrsWeb.csprojResolveAssemblyReference.cache
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\obj\Debug\MhrsWeb.csproj.CoreCompileInputs.cache
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\obj\Debug\MhrsWeb.dll
+C:\Users\Ayça\Desktop\MhrsWeb\MhrsWeb\MhrsWeb\obj\Debug\MhrsWeb.pdb
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\MhrsWeb.dll.config
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\MhrsWeb.dll
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\MhrsWeb.pdb
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\EntityFramework.dll
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\EntityFramework.SqlServer.dll
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\Newtonsoft.Json.dll
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Helpers.dll
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Mvc.dll
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Razor.dll
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Webpages.dll
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Webpages.Razor.dll
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\EntityFramework.xml
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\EntityFramework.SqlServer.xml
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\Newtonsoft.Json.xml
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Razor.xml
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Webpages.xml
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Webpages.Razor.xml
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Helpers.xml
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\bin\System.Web.Mvc.xml
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\obj\Debug\MhrsWeb.csprojResolveAssemblyReference.cache
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\obj\Debug\MhrsWeb.csproj.CoreCompileInputs.cache
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\obj\Debug\MhrsWeb.dll
+C:\Users\Ayça\Desktop\YAZILIM\Web & MVC\MVC-MhrsWeb\MhrsWeb\MhrsWeb\obj\Debug\MhrsWeb.pdb

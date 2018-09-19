@@ -1,0 +1,97 @@
+﻿@model MhrsWeb.Models.KullaniciBilgileriModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <title>Kaydol</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <h4>Kullanıcı Bilgilerini Düzenle</h4>
+
+            </div>
+        </div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <div class="form-group">
+            @Html.Label("Ad", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", required = "required", disabled = "disabled", placeholder = "Ad Giriniz", } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Soyad", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Surname, new { htmlAttributes = new { @class = "form-control", required = "required", disabled = "disabled", placeholder = "Soyad Giriniz" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Doğum Tarihi", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "form-control", required = "required", disabled = "disabled", placeholder = "(Örn: 30.05.1990)" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("E-Mail", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", type = "email", placeholder = "(Örn: example@example.com)" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Eski Şifre*", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="password" class="form-control" id="eskiSifre" name="eskiSifre" placeholder="Eski Şifrenizi Girin" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Yeni Şifre", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="password" class="form-control" id="yeniSifre" name="yeniSifre" placeholder="Yeni Şifrenizi Girin"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Yeni Şifre(Tekrar)", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="password" class="form-control" id="yeniSifreTekrar" name="yeniSifreTekrar" placeholder="Yeni Şifrenizi Girin(Tekrar)"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @Html.ActionLink("Geri Dön", "Index")&nbsp;
+                <input type="submit" value="Güncelle" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+    }
+
+
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

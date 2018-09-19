@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NorthwindModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="AppointmentID" />
+    </Key>
+    <Property Name="AppointmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PatientID" Type="Int32" Nullable="false" />
+    <Property Name="DoctorID" Type="Int32" Nullable="false" />
+    <Property Name="AppointmentDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AppointmentTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AppointmentStatus" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Doctor" Relationship="Self.FK_Appointment_Doctor" FromRole="Appointment" ToRole="Doctor" />
+    <NavigationProperty Name="Patient" Relationship="Self.FK_Appointment_Patient" FromRole="Appointment" ToRole="Patient" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_Categories" FromRole="Categories" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Towns" Relationship="Self.FK_Town_City" FromRole="City" ToRole="Town" />
+  </EntityType>
+  <EntityType Name="Clinic">
+    <Key>
+      <PropertyRef Name="ClinicID" />
+    </Key>
+    <Property Name="ClinicID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClinicBranch" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TimeRange" Type="Int32" Nullable="false" />
+    <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Doctors" Relationship="Self.FK_Doctor_Clinic" FromRole="Clinic" ToRole="Doctor" />
+    <NavigationProperty Name="Hospitals" Relationship="Self.HospitalClinic" FromRole="Clinic" ToRole="Hospital" />
+  </EntityType>
+  <EntityType Name="CustomerDemographic">
+    <Key>
+      <PropertyRef Name="CustomerTypeID" />
+    </Key>
+    <Property Name="CustomerTypeID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="CustomerDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Customers" Relationship="Self.CustomerCustomerDemo" FromRole="CustomerDemographics" ToRole="Customers" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="String" MaxLength="5" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="CompanyName" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContactName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ContactTitle" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Region" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Customers" FromRole="Customers" ToRole="Orders" />
+    <NavigationProperty Name="CustomerDemographics" Relationship="Self.CustomerCustomerDemo" FromRole="Customers" ToRole="CustomerDemographics" />
+  </EntityType>
+  <EntityType Name="Doctor">
+    <Key>
+      <PropertyRef Name="DoctorID" />
+    </Key>
+    <Property Name="DoctorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DoctorFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DoctorLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TittleID" Type="Int32" Nullable="false" />
+    <Property Name="ClinicID" Type="Int32" Nullable="false" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Appointments" Relationship="Self.FK_Appointment_Doctor" FromRole="Doctor" ToRole="Appointment" />
+    <NavigationProperty Name="Clinic" Relationship="Self.FK_Doctor_Clinic" FromRole="Doctor" ToRole="Clinic" />
+    <NavigationProperty Name="Tittle" Relationship="Self.FK_Doctor_Tittle" FromRole="Doctor" ToRole="Tittle" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LastName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="TitleOfCourtesy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="BirthDate" Type="DateTime" Precision="3" />
+    <Property Name="HireDate" Type="DateTime" Precision="3" />
+    <Property Name="Address" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Region" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="HomePhone" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+    <Property Name="Extension" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportsTo" Type="Int32" />
+    <Property Name="PhotoPath" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Employees1" Relationship="Self.FK_Employees_Employees" FromRole="Employees" ToRole="Employees1" />
+    <NavigationProperty Name="Employee1" Relationship="Self.FK_Employees_Employees" FromRole="Employees1" ToRole="Employees" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Employees" FromRole="Employees" ToRole="Orders" />
+    <NavigationProperty Name="Territories" Relationship="Self.EmployeeTerritories" FromRole="Employees" ToRole="Territories" />
+  </EntityType>
+  <EntityType Name="Hospital">
+    <Key>
+      <PropertyRef Name="HospitalID" />
+    </Key>
+    <Property Name="HospitalID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HospitalName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TownID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Town" Relationship="Self.FK_Hospital_Town" FromRole="Hospital" ToRole="Town" />
+    <NavigationProperty Name="Clinics" Relationship="Self.HospitalClinic" FromRole="Hospital" ToRole="Clinic" />
+  </EntityType>
+  <EntityType Name="Order_Detail">
+    <Key>
+      <PropertyRef Name="OrderID" />
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Quantity" Type="Int16" Nullable="false" />
+    <Property Name="Discount" Type="Single" Nullable="false" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Order_Details_Orders" FromRole="Order_Details" ToRole="Orders" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_Order_Details_Products" FromRole="Order_Details" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerID" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="OrderDate" Type="DateTime" Precision="3" />
+    <Property Name="RequiredDate" Type="DateTime" Precision="3" />
+    <Property Name="ShippedDate" Type="DateTime" Precision="3" />
+    <Property Name="ShipVia" Type="Int32" />
+    <Property Name="Freight" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ShipName" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="ShipAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ShipCity" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="ShipRegion" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="ShipPostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ShipCountry" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK_Orders_Customers" FromRole="Orders" ToRole="Customers" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK_Orders_Employees" FromRole="Orders" ToRole="Employees" />
+    <NavigationProperty Name="Order_Details" Relationship="Self.FK_Order_Details_Orders" FromRole="Orders" ToRole="Order_Details" />
+    <NavigationProperty Name="Shipper" Relationship="Self.FK_Orders_Shippers" FromRole="Orders" ToRole="Shippers" />
+  </EntityType>
+  <EntityType Name="Patient">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Name="PatientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdentitiyNumber" Type="Int64" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CellPhone" Type="Int64" Nullable="false" />
+    <Property Name="HomePhone" Type="Int64" Nullable="false" />
+    <Property Name="SecurityQuestion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Answer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PlaceOfBirth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MotherName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FatherName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Appointments" Relationship="Self.FK_Appointment_Patient" FromRole="Patient" ToRole="Appointment" />
+    <NavigationProperty Name="PatientLogin" Relationship="Self.FK_PatientLogin_Patient" FromRole="Patient" ToRole="PatientLogin" />
+  </EntityType>
+  <EntityType Name="PatientLogin">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="IdentitiyNumber" Type="Int64" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Patient" Relationship="Self.FK_PatientLogin_Patient" FromRole="PatientLogin" ToRole="Patient" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SupplierID" Type="Int32" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="QuantityPerUnit" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="UnitsInStock" Type="Int16" />
+    <Property Name="UnitsOnOrder" Type="Int16" />
+    <Property Name="ReorderLevel" Type="Int16" />
+    <Property Name="Discontinued" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_Products_Categories" FromRole="Products" ToRole="Categories" />
+    <NavigationProperty Name="Order_Details" Relationship="Self.FK_Order_Details_Products" FromRole="Products" ToRole="Order_Details" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_Products_Suppliers" FromRole="Products" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="RegionID" />
+    </Key>
+    <Property Name="RegionID" Type="Int32" Nullable="false" />
+    <Property Name="RegionDescription" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Territories" Relationship="Self.FK_Territories_Region" FromRole="Region" ToRole="Territories" />
+  </EntityType>
+  <EntityType Name="Shipper">
+    <Key>
+      <PropertyRef Name="ShipperID" />
+    </Key>
+    <Property Name="ShipperID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Shippers" FromRole="Shippers" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContactName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ContactTitle" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Region" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+    <Property Name="HomePage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_Suppliers" FromRole="Suppliers" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Territory">
+    <Key>
+      <PropertyRef Name="TerritoryID" />
+    </Key>
+    <Property Name="TerritoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TerritoryDescription" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="RegionID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Region" Relationship="Self.FK_Territories_Region" FromRole="Territories" ToRole="Region" />
+    <NavigationProperty Name="Employees" Relationship="Self.EmployeeTerritories" FromRole="Territories" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="Tittle">
+    <Key>
+      <PropertyRef Name="TittleID" />
+    </Key>
+    <Property Name="TittleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TittleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Doctors" Relationship="Self.FK_Doctor_Tittle" FromRole="Tittle" ToRole="Doctor" />
+  </EntityType>
+  <EntityType Name="Town">
+    <Key>
+      <PropertyRef Name="TownID" />
+    </Key>
+    <Property Name="TownID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TownName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CityID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="City" Relationship="Self.FK_Town_City" FromRole="Town" ToRole="City" />
+    <NavigationProperty Name="Hospitals" Relationship="Self.FK_Hospital_Town" FromRole="Town" ToRole="Hospital" />
+  </EntityType>
+  <Association Name="FK_Appointment_Doctor">
+    <End Role="Doctor" Type="Self.Doctor" Multiplicity="1" />
+    <End Role="Appointment" Type="Self.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorID" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Appointment_Patient">
+    <End Role="Patient" Type="Self.Patient" Multiplicity="1" />
+    <End Role="Appointment" Type="Self.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Categories">
+    <End Role="Categories" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Town_City">
+    <End Role="City" Type="Self.City" Multiplicity="1" />
+    <End Role="Town" Type="Self.Town" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityID" />
+      </Principal>
+      <Dependent Role="Town">
+        <PropertyRef Name="CityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doctor_Clinic">
+    <End Role="Clinic" Type="Self.Clinic" Multiplicity="1" />
+    <End Role="Doctor" Type="Self.Doctor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clinic">
+        <PropertyRef Name="ClinicID" />
+      </Principal>
+      <Dependent Role="Doctor">
+        <PropertyRef Name="ClinicID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_Customers">
+    <End Role="Customers" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doctor_Tittle">
+    <End Role="Tittle" Type="Self.Tittle" Multiplicity="1" />
+    <End Role="Doctor" Type="Self.Doctor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tittle">
+        <PropertyRef Name="TittleID" />
+      </Principal>
+      <Dependent Role="Doctor">
+        <PropertyRef Name="TittleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employees_Employees">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Employees1" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Employees1">
+        <PropertyRef Name="ReportsTo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_Employees">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hospital_Town">
+    <End Role="Town" Type="Self.Town" Multiplicity="1" />
+    <End Role="Hospital" Type="Self.Hospital" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Town">
+        <PropertyRef Name="TownID" />
+      </Principal>
+      <Dependent Role="Hospital">
+        <PropertyRef Name="TownID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Details_Orders">
+    <End Role="Orders" Type="Self.Order" Multiplicity="1" />
+    <End Role="Order_Details" Type="Self.Order_Detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="Order_Details">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Details_Products">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="Order_Details" Type="Self.Order_Detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="Order_Details">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_Shippers">
+    <End Role="Shippers" Type="Self.Shipper" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shippers">
+        <PropertyRef Name="ShipperID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="ShipVia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PatientLogin_Patient">
+    <End Role="Patient" Type="Self.Patient" Multiplicity="1" />
+    <End Role="PatientLogin" Type="Self.PatientLogin" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="PatientLogin">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Suppliers">
+    <End Role="Suppliers" Type="Self.Supplier" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Territories_Region">
+    <End Role="Region" Type="Self.Region" Multiplicity="1" />
+    <End Role="Territories" Type="Self.Territory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="RegionID" />
+      </Principal>
+      <Dependent Role="Territories">
+        <PropertyRef Name="RegionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CustomerCustomerDemo">
+    <End Role="CustomerDemographics" Type="Self.CustomerDemographic" Multiplicity="*" />
+    <End Role="Customers" Type="Self.Customer" Multiplicity="*" />
+  </Association>
+  <Association Name="EmployeeTerritories">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="*" />
+    <End Role="Territories" Type="Self.Territory" Multiplicity="*" />
+  </Association>
+  <Association Name="HospitalClinic">
+    <End Role="Clinic" Type="Self.Clinic" Multiplicity="*" />
+    <End Role="Hospital" Type="Self.Hospital" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="NorthwindEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Appointments" EntityType="Self.Appointment" />
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Cities" EntityType="Self.City" />
+    <EntitySet Name="Clinics" EntityType="Self.Clinic" />
+    <EntitySet Name="CustomerDemographics" EntityType="Self.CustomerDemographic" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="Doctors" EntityType="Self.Doctor" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Hospitals" EntityType="Self.Hospital" />
+    <EntitySet Name="Order_Details" EntityType="Self.Order_Detail" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="Patients" EntityType="Self.Patient" />
+    <EntitySet Name="PatientLogins" EntityType="Self.PatientLogin" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="Regions" EntityType="Self.Region" />
+    <EntitySet Name="Shippers" EntityType="Self.Shipper" />
+    <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Territories" EntityType="Self.Territory" />
+    <EntitySet Name="Tittles" EntityType="Self.Tittle" />
+    <EntitySet Name="Towns" EntityType="Self.Town" />
+    <AssociationSet Name="FK_Appointment_Doctor" Association="Self.FK_Appointment_Doctor">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Appointment_Patient" Association="Self.FK_Appointment_Patient">
+      <End Role="Patient" EntitySet="Patients" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Categories" Association="Self.FK_Products_Categories">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Town_City" Association="Self.FK_Town_City">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="Town" EntitySet="Towns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doctor_Clinic" Association="Self.FK_Doctor_Clinic">
+      <End Role="Clinic" EntitySet="Clinics" />
+      <End Role="Doctor" EntitySet="Doctors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Customers" Association="Self.FK_Orders_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doctor_Tittle" Association="Self.FK_Doctor_Tittle">
+      <End Role="Tittle" EntitySet="Tittles" />
+      <End Role="Doctor" EntitySet="Doctors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employees_Employees" Association="Self.FK_Employees_Employees">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Employees1" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Employees" Association="Self.FK_Orders_Employees">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hospital_Town" Association="Self.FK_Hospital_Town">
+      <End Role="Town" EntitySet="Towns" />
+      <End Role="Hospital" EntitySet="Hospitals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Details_Orders" Association="Self.FK_Order_Details_Orders">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="Order_Details" EntitySet="Order_Details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Details_Products" Association="Self.FK_Order_Details_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Order_Details" EntitySet="Order_Details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Shippers" Association="Self.FK_Orders_Shippers">
+      <End Role="Shippers" EntitySet="Shippers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PatientLogin_Patient" Association="Self.FK_PatientLogin_Patient">
+      <End Role="Patient" EntitySet="Patients" />
+      <End Role="PatientLogin" EntitySet="PatientLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Suppliers" Association="Self.FK_Products_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Territories_Region" Association="Self.FK_Territories_Region">
+      <End Role="Region" EntitySet="Regions" />
+      <End Role="Territories" EntitySet="Territories" />
+    </AssociationSet>
+    <AssociationSet Name="CustomerCustomerDemo" Association="Self.CustomerCustomerDemo">
+      <End Role="CustomerDemographics" EntitySet="CustomerDemographics" />
+      <End Role="Customers" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="EmployeeTerritories" Association="Self.EmployeeTerritories">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Territories" EntitySet="Territories" />
+    </AssociationSet>
+    <AssociationSet Name="HospitalClinic" Association="Self.HospitalClinic">
+      <End Role="Clinic" EntitySet="Clinics" />
+      <End Role="Hospital" EntitySet="Hospitals" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

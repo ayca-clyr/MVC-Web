@@ -1,0 +1,30 @@
+﻿@model _161116_EmployeeManagement.EF.Entities.Employee
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Delete</h2>
+
+<div class="col-md-6 col-md-offset-3">
+    <p>
+        Aşağıdaki bilgileri silmek istediğinize emin misiniz?
+    </p>
+
+
+    <strong> Çalışan Adı : @*@Model.Name*@ </strong>@Html.DisplayFor(x => x.FirstName) <br />    
+    <strong> Açıklaması :  @Model.LastName</strong><br />
+    <strong> Açıklaması :  @Model.Salary</strong><br />
+    <strong> Açıklaması :  @Model.Gender</strong><br />
+
+    <form method="post">
+        @*Bu zaten direk delete'e gidiyor.*@
+        @* Formda olduğu için Button'un default değeri submit.*@
+        @Html.HiddenFor(x => x.Id)
+        <button class="btn btn-danger pull-left">Sil</button>
+    </form>
+    <form action="@Url.Action("Index")">
+        <button class="btn btn-primary ">İptal</button>
+    </form>
+</div>
+

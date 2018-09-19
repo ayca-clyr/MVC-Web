@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="MyStil.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script>
+        function KutuGoster() {
+            $("#kutu").show();
+        }
+        function KutuGizle() {
+            $("#kutu").hide();
+        }
+
+        function FarklıKutuGoster() {
+            $(".farkliKutu").show();
+        }
+        function FarklıKutuGizle() {
+            $(".farkliKutu").hide();
+        }
+
+    </script>
+
+
+
+</head>
+<body>
+    <input type="button" value="Göster" onclick="KutuGoster()" /> 
+    <input type="button" value="Gizle" onclick="KutuGizle()" />
+
+    <div id="kutu"></div>
+        <input type="button" value="FarklıGöster" onclick="FarklıKutuGoster()" />
+  
+        <input type="button" value="FarklıGizle" onclick="FarklıKutuGizle()" />
+ 
+        <div class="farkliKutu">1</div>
+        <div class="farkliKutu">2</div>
+        <div class="farkliKutu">3</div>
+        <div class="farkliKutu">4</div>
+        <div class="farkliKutu">5</div>
+
+   
+
+
+</body>
+</html>

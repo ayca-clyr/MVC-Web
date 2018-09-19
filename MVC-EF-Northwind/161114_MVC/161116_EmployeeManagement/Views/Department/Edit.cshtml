@@ -1,0 +1,49 @@
+﻿@using _161116_EmployeeManagement.EF.Entities
+@model Department
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.Id != 0)
+{
+    <h2>Departman Düzenleme</h2>
+}
+else
+{
+    <h2>Departman Ekle</h2>
+}
+
+
+@*action="/Department"*@
+
+<form method="post">
+    <div class="form-group">
+        @*<label>Departman Adı</label>  (Aşağıdaki işlemle aynı).*@
+        @Html.LabelFor(m=>m.Name, "Departman Adı")
+
+        @*<input id="name" name="Name" value="@Model.Name" class="form-control" />  (Aşağıdaki işlemle aynı)*@
+        @Html.TextBoxFor(m => m.Name, new { @class="form-control" })   @*C# 'da özel anlamı varsa class gibi başına @ işareti koyuyoruz*@. 
+    </div>
+
+    <div class="form-group">
+        @*<label>Açıklaması</label>*@
+        @Html.LabelFor(m=>m.Description,"Açıklama")
+        
+        @*<textarea id="description" name="Description">@Model.Description</textarea>*@
+        @Html.TextAreaFor(m => m.Description, new { @class="form-control"})
+    </div>
+
+    <div class="form-group">
+        @if (Model.Id != 0) {
+        <button class="btn btn-primary">Güncelle</button>
+        }
+        else
+        {
+            <button class="btn btn-primary">Kaydet</button>
+
+        }
+        <a href="/Department" class="btn btn-danger">İptal</a>
+    </div>
+
+</form>

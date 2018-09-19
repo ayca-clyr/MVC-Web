@@ -1,0 +1,69 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/assets/Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url("http://i1096.photobucket.com/albums/g337/visualflame/hell.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+
+        }
+
+        .well {
+            background-color: red;
+            margin-top: 10%;
+            box-shadow: 0 0 10px 5px yellow;
+            /*background-image:url("https://s-media-cache-ak0.pinimg.com/736x/de/6d/96/de6d9657acd15f66a983f2cab548d9d5.jpg");*/
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 well">
+            <form class="text-center" method="post">
+                <div>
+                    <img src="https://cimbomturk.files.wordpress.com/2010/08/31.jpg" style="width:100%;">
+                </div>
+                <br />
+                <div class="form-group">
+                    <input type="text" name="userId" class="form-control" placeholder="Kullanıcı Adı..." />
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="Parola..." />
+                </div>
+                <div class="form-control">
+                    <input type="checkbox" name="rememberMe" class="" id="remember_me" />
+                    <label for="remember_me" style="cursor:pointer;">Beni Hatırla</label>
+                    @* for id'ye göre alır. Onun label'i demektir. cursor:pointer --> El olarak geliyor. *@
+                </div>
+                <div style="display:none" class="form-group text-center alert alert-danger" id="error-message">@ViewBag.ErrorMessage</div>
+                <div class="form-group">
+                    <button class="btn" style="background-color:yellow;color:red;font:bold;">Giriş</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="~/assets/Scripts/jquery-1.9.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            if ($("#error-message").html() != "") {
+                $("#error-message").slideDown();
+                setTimeout(function () {
+                    $("#error-message").slideUp();
+                },5000);
+            }
+        })
+    </script>
+</body>
+</html>

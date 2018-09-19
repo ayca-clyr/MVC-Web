@@ -1,0 +1,63 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <input type="text" placeholder="CategoryID" id="CategoryID" />
+    <input type="submit" id="GetCategory" value="Kategori Getir" />
+
+    <p>Kategori Adı : <strong id="Name"></strong></p>
+    <p>Açıklaması : <strong id="Description"></strong></p>
+
+
+
+
+    <script src="~/jQuery.1.9.1/Content/Scripts/jquery-1.9.1.js"></script>
+
+    <script type="text/ ">
+        // Ajax script kodudur. Script tagları arasına yazılır.
+        // Diğer projedenpackageden jquery klasörünü yeni projenin package'sinin içine koyduk. Daha sonra ordaki klasörü solutionun üstüne sürükledik.
+
+        // Ajax örneğin facebookdaki aniden beğenen insanların haber akışlarını gördüğümdür. Yani sayfa yenilemeden direk POST işlemi yapıyor.
+
+        /*$.ajax({
+            url: '/Home/xxxx',
+            type: 'POST',
+            dataType: 'json',
+            success: function(){},
+            error: function () { },
+            });
+        */
+        $(document).ready(function () {
+            $("#GetCategory").click(function () {
+                var Id = $("#CategoryID").val();
+
+                $.ajax({
+                    url: '/Home/GetCategory/' + Id,
+                    type: 'POST',
+                    dataType: 'json',
+                    success: function (data) {
+                        $("#Name").html(data.CategoryName);
+                        $("#Description").html(data.Description);
+                    },
+                    error: function () {
+                        alert("DATA GELMİYORR")
+                    }
+                })
+            })
+
+        });
+
+    </script>
+
+
+</body>
+</html>

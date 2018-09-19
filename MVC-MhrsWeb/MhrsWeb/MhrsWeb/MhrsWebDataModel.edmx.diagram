@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="08c85a59164b46e1b9b40e967b3bf8fb" Name="Diagram1">
+        <EntityTypeShape EntityType="MhrsWebDBModel.Cinsiyet" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MhrsWebDBModel.Command" Width="1.5" PointX="3.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MhrsWebDBModel.Doktor" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MhrsWebDBModel.Hastane" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MhrsWebDBModel.Hastane_Klinik" Width="1.5" PointX="4" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MhrsWebDBModel.Ilce" Width="1.5" PointX="1.5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MhrsWebDBModel.Klinik" Width="1.5" PointX="0.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MhrsWebDBModel.Kullanici" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MhrsWebDBModel.Login" Width="1.5" PointX="8.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MhrsWebDBModel.Randevu" Width="1.5" PointX="10.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MhrsWebDBModel.RandevuSaati" Width="1.5" PointX="6" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MhrsWebDBModel.RandvuSaati_Doktor" Width="1.5" PointX="8.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="MhrsWebDBModel.Sehir" Width="1.5" PointX="1.5" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="MhrsWebDBModel.sysdiagrams" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="MhrsWebDBModel.FK_Doktor_Cinsiyet" ManuallyRouted="false" />
+        <AssociationConnector Association="MhrsWebDBModel.FK_Kullanici_Cinsiyet" ManuallyRouted="false" />
+        <AssociationConnector Association="MhrsWebDBModel.FK_Kullanici_Command" ManuallyRouted="false" />
+        <AssociationConnector Association="MhrsWebDBModel.FK_Doktor_Hastane" ManuallyRouted="false" />
+        <AssociationConnector Association="MhrsWebDBModel.FK_Doktor_Klinik" ManuallyRouted="false" />
+        <AssociationConnector Association="MhrsWebDBModel.FK_Randevu_Doktor" ManuallyRouted="false" />
+        <AssociationConnector Association="MhrsWebDBModel.FK_RandvuSaati_Doktor_Doktor" ManuallyRouted="false" />
+        <AssociationConnector Association="MhrsWebDBModel.FK_Hastane_Ilce" ManuallyRouted="false" />
+        <AssociationConnector Association="MhrsWebDBModel.FK_Hastane_Klinik_Hastane" ManuallyRouted="false" />
+        <AssociationConnector Association="MhrsWebDBModel.FK_Hastane_Klinik_Klinik" ManuallyRouted="false" />
+        <AssociationConnector Association="MhrsWebDBModel.FK_Ilce_Sehir" ManuallyRouted="false" />
+        <AssociationConnector Association="MhrsWebDBModel.FK_Login_Kullanici" ManuallyRouted="false" />
+        <AssociationConnector Association="MhrsWebDBModel.FK_Randevu_Login" ManuallyRouted="false" />
+        <AssociationConnector Association="MhrsWebDBModel.FK_Randevu_RandevuSaati" ManuallyRouted="false" />
+        <AssociationConnector Association="MhrsWebDBModel.FK_RandvuSaati_Doktor_RandevuSaati" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

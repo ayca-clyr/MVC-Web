@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#uye_formu").on("keyup", function (event) {
+                form_kontrolu();
+            });
+        });
+        var form_kontrolu = function () {
+            var kadi = $("#kadi").val();
+            var sifre1 = $("#sifre1").val();
+            var sifre2 = $("#sifre2").val();
+            var email = $("#email").val();
+            var atpos = email.indexOf("@");
+            var dotpos = email.lastIndexOf(".");
+            if (kadi == null || kadi == "" || kadi.length < 4)
+                $('.uyari').html("Kullanıcı adı 4 karakterden az olamaz");
+            else if (sifre1 == null || sifre1 == "" || sifre2 == null || sifre2 == "")
+                $('.uyari').html("Şifreyi boş bırakmayın");
+            else if (!(sifre1 == sifre2))
+                $('.uyari').html("Şifreler eşleşmiyor");
+            else if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.length)
+                $('.uyari').html("Geçerli email adresi girin");
+            else {
+                $('.uyari').empty();
+                $('#uye_formu').removeAttr('onsubmit');
+            }
+        }
+    </script>
+
+
+    <style>
+        #uyelik_formu {
+            padding: 10px;
+            width: 400px;
+            border: 1px solid black;
+        }
+
+        label {
+            float: left;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <form name="form" id="uye_formu" action="jquery_form_kontrolu_post" method="post" onsubmit="return false;">
+            <label>Kullanıcı Adı:</label>
+            <input type="text" id="kadi" name="kadi">
+            <br>
+            <label>Şifre:</label>
+            <input type="password" id="sifre1" name="sifre1">
+            <br>
+            <label>Şifre (Tekrar):</label>
+            <input type="password" id="sifre2" name="sifre2">
+            <br>
+            <label>E-Mail:</label>
+            <input type="text" id="email" name="email">
+            <br>
+            <input type="submit" value="Kaydet!">
+        </form>
+        <div class="uyari"></div>
+    </div>
+</body>
+</html>

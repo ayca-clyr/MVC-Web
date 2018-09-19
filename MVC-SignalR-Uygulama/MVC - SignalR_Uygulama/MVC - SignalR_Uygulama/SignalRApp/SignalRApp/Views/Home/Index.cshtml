@@ -1,0 +1,66 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SignalR Chat</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.3.0.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+
+    <script src="~/Scripts/Custom.js"></script>
+</head>
+<body>
+
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-9">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">SignalR Chat</div>
+                        <div class="panel-body">
+                            <div class="container messageContainer" id="messageContainer" style="max-height:450px; min-height:450px;  overflow-y: scroll;">
+
+                            </div>
+                            <div class="panel-footer">
+                                <div class="input-group">
+                                    <input type="text" id="txtInput" class="form-control">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" id="Send" type="button">Gönder</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Kullanıcılar</div>
+                        <div class="panel-body">
+                            <div class="container userContainer" id="userContainer" style="max-height:505px; min-height:505px;  overflow-y: scroll;">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+

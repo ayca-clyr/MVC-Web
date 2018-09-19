@@ -1,0 +1,29 @@
+﻿@using _161116_EmployeeManagement.EF.Entities
+@model Department
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Departman Ekle</h2>
+
+@using (Html.BeginForm("Create", "Department", FormMethod.Post))  // Varsayılan Post olduğu için yazmasak olur.
+{
+
+
+        <div class="form-group">           
+            @Html.LabelFor(m => m.Name, "Departman Adı")        
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })   @*C# 'da özel anlamı varsa class gibi başına @ işareti koyuyoruz*@.
+        </div>
+        <div class="form-group">          
+            @Html.LabelFor(m => m.Description, "Açıklama")
+            @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary">Kaydet</button>
+@*            <a href="@Url.Action("Index","Department")" class="btn btn-danger">İptal</a>*@
+
+            @Html.ActionLink("İptal", "Index", "Department", null, new {@class="btn btn-danger" })
+        </div>
+}

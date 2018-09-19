@@ -1,0 +1,223 @@
+﻿@model MhrsWeb.Login
+@{
+    ViewBag.Title = "Index";
+}
+@{
+
+    Login login = (Login)Session["CurrentUser"];
+    if (login.Durum == false)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <div style="color:green" class="col-md-4">
+                    @if (Session["LoginFullName"] != null)
+                    {
+                        <h4>
+                            <b>
+                                Hoşgeldiniz @Session["LoginFullName"].ToString()
+                            </b>
+                        </h4>
+                    }
+                </div>
+                <div style="color:blue" class="col-md-4">
+                    <h4>
+                        <b>
+                            Merkezi Hekim Randevu Sistemi
+                        </b>
+                    </h4>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group pull-right">
+                        <a href="@Url.Action("KullaniciBilgileri","Home",new { SeoText = MhrsWeb.Helper.LinkExtension.SeoReplace(@Session["LoginFullName"].ToString()) })" class="btn btn-warning btn-sm ">Kullanıcı Bilgileri</a>
+                        <a href="#GecmisModal" data-toggle="modal" class="btn btn-warning btn-sm randevuGecmisi">Randvu Geçmişi</a>
+                        <a href="@Url.Action("Logout","Login")" class="btn btn-danger btn-sm">Çıkış X</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page-content" class="container-fluid">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default" style="min-height:387px;">
+                                <div class="panel-body">
+                                    <div class="panel-item">
+                                        <div class="col-md-6">
+                                            Tarih
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select id="Tarih">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="panel-item">
+                                        <div class="col-md-6">
+                                            Şehir
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select id="Sehir">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="panel-item">
+                                        <div class="col-md-6">
+                                            İlçe
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select id="Ilce">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel-item">
+                                        <div class="col-md-6">
+                                            Hastane
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select id="Hastane">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="panel-item">
+                                        <div class="col-md-6">
+                                            Klinik
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select id="Klinik">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="panel-item">
+                                        <div class="col-md-6">
+                                            Doktor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select id="Doktor">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="panel-item">
+                                        <div class="col-md-12 ">
+                                            <button id="RandevuAra" class="btn btn-success pull-right">Randevu Ara</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default" style="min-height: 387px;">
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div id="RandevuSaatContainer" class="col-md-12">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="pre-scrollable  panel-body" style="max-height:200px; min-height:200px">
+                            <table id="RandevuArama" class="table table-hover">
+                                <thead class="alert-success">
+                                    <tr>
+                                        <th>Doktor</th>
+                                        <th>En Erken Tarih</th>
+                                        <th>Hastane</th>
+                                        <th>Klinik</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RANDEVU GECMİŞİ MODALI-->
+        <div class="modal fade" id="GecmisModal" role="dialog">
+            <div class="modal-dialog" style="overflow-y: scroll; max-height:85%; margin-top: 70px; margin-bottom:50px; padding:-30px">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Randevu Geçmişi</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table id="TumRandevular" class="table table-hover">
+                            <thead class="alert-success">
+                                <tr>
+                                    <th>Doktor</th>
+                                    <th>Tarih ve Saat</th>
+                                    <th>Hastane</th>
+                                    <th>Klinik</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+
+
+        <form action="@Url.Action("YeniSifre","Home")" method="POST">
+
+            <div class="form-horizontal">
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <h4>Yeni Şifrenizi Giriniz!</h4>
+
+                    </div>
+                </div>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.Label("Yeni Şifre", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input type="password" class="form-control" id="yeniSifre" name="yeniSifre" placeholder="Yeni Şifrenizi Girin" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Yeni Şifre(Tekrar)", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input type="password" class="form-control" id="yeniSifreTekrar" name="yeniSifreTekrar" placeholder="Yeni Şifrenizi Girin(Tekrar)" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">                        
+                        <input type="submit" value="Kaydet" class="btn btn-success" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    }
+}
+
+
+@section scriptJs{
+
+    <script src="~/Scripts/custom.js"></script>
+}

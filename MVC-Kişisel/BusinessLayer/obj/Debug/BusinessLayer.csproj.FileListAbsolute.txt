@@ -1,0 +1,26 @@
+C:\Users\Ayça\Desktop\Kisisel\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\Ayça\Desktop\Kisisel\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\Ayça\Desktop\Kisisel\BusinessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Ayça\Desktop\Kisisel\BusinessLayer\bin\Debug\Entities.dll
+C:\Users\Ayça\Desktop\Kisisel\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Ayça\Desktop\Kisisel\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Ayça\Desktop\Kisisel\BusinessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\Ayça\Desktop\Kisisel\BusinessLayer\bin\Debug\Entities.pdb
+C:\Users\Ayça\Desktop\Kisisel\BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Ayça\Desktop\Kisisel\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Ayça\Desktop\Kisisel\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Ayça\Desktop\Kisisel\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Ayça\Desktop\Kisisel\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Ayça\Desktop\Proje Yedek\Kisisel\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Kisisel\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\Ayça\Desktop\Proje Yedek\Kisisel\BusinessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Kisisel\BusinessLayer\bin\Debug\Entities.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Kisisel\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Kisisel\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Ayça\Desktop\Proje Yedek\Kisisel\BusinessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\Ayça\Desktop\Proje Yedek\Kisisel\BusinessLayer\bin\Debug\Entities.pdb
+C:\Users\Ayça\Desktop\Proje Yedek\Kisisel\BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Ayça\Desktop\Proje Yedek\Kisisel\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Ayça\Desktop\Proje Yedek\Kisisel\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Ayça\Desktop\Proje Yedek\Kisisel\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Ayça\Desktop\Proje Yedek\Kisisel\BusinessLayer\obj\Debug\BusinessLayer.pdb

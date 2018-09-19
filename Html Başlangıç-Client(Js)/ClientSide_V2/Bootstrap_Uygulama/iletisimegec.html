@@ -1,0 +1,187 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <!-- PW Consola Install Jquery -Version 1.9.1 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <!-- En son kendi yazdığımız Content içindeki kendi yazdığımız css önemli -->
+   
+
+</head>
+<body>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+<script src="Scripts/bootstrap.js"></script>
+    <link href="Content/main.css" rel="stylesheet" />
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="img/FacePress.png" />
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav ">
+                    <li ><a href="#">Anasayfa</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Google</a>+</li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projeler <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Emlak Yazılımı</a></li>
+                            <li><a href="#">Kütüphane Otomasyonu</a></li>
+                            <li><a href="#">Hastane Otomasyonu</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    <li class ="active"><a href="#footer">İletişim</a></li>   <!-- Footer'a footer id verdik ve nerden çağıracaksak (iletişim )#footer diyoruz-->
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="btn btn-success" href="iletisimegec.html" role="button">İletişime Geç</a>
+                    </li>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li><a href="#"> <span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+                    <li><a href="#">İletişim</a></li>
+
+                </ol>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2"></div>
+            <form>
+                <div class="alert alert-success" role="alert"><strong>Teşekkürler! </strong> Mesajınız Alınmıştır.
+                </div>
+                <!--Row Başlangıç-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="fullName">Ad & Soyad</label>
+                            <input type="text" class="form-control" id="fullName">
+                        </div>
+                    </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" id="email">
+                            </div>
+                        
+                    </div>
+
+                </div>
+                <!--Row Bitiş-->
+                <div class="form-group">
+                    <label for="category">Kategori seçiniz</label>
+                    <select class="form-control" id="category">
+                        <option>Hosting</option>
+                        <option>Emlak Scripti</option>
+                        <option>Hastane Otomasyon</option>
+                        <option>Kütüphane Otomasyon</option>
+
+                    </select>
+                </div>
+
+                <div class="form-group form-group-lg">
+                    <label for="title">Başlık</label>
+                   <input type="text" class="form-control" id="title"/>
+
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="3" placeholder="Birşeyler yazınız..."></textarea>
+                </div>
+          <div class="form-group">
+              <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Erkek <!--Görünen Kadın-Erkek Gidecek Değer option1 name isimleri bütün radiobutonlarda aynı olmalı farklı yazarsan seçtiğin kalıcı olur-->
+              </label>
+              <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Kadın
+              </label>
+              <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Diğer
+              </label>
+          </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">Dosya Ekleyiniz</label>
+                    <input type="file" id="exampleInputFile">
+                    <p class="help-block">Lütfen sadece jnp.png ve gif uzantılı dosyalarını ekleyiniz</p>
+                </div>
+
+
+                <div class="form-group text-right">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">
+                            Kullanıcı koşullarını okudum ve kabul ediyorum.
+                        </label>
+                    </div>
+                </div>
+                <button class="btn btn-danger" type="submit" style="width:100%;">Gönder </button> <!--Renk Danger-->
+            </form>
+
+
+        </div>
+    </div>
+
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Telefon</h3>
+                    <p>0537 360 20 92</p>
+                    <p>0537 360 20 02</p>
+
+                </div>
+                <div class="col-md-4">
+                    <h3>Email</h3>
+                    <p>ayca.clyr@gmail.com</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h3>Sosyal Medya</h3>
+                    <ul class="sosyal">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+
+    </footer>
+
+   
+</body>
+</html>

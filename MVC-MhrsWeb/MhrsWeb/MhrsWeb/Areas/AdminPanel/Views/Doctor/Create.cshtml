@@ -1,0 +1,64 @@
+﻿@model MhrsWeb.Areas.AdminPanel.Models.DoctorViewModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Doktor Ekle</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.Label("Doktor Adı Soyadı")
+            <input type="text" name="FullName" id="FullName" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Uzmanlık Alanı")
+            <select name="UzmanlıkId" id="UzmanlıkId" class="form-control">
+                @foreach (var item in Model.klinikList)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Çalıştığı Hastane")
+            <select name="HastaneId" id="HastaneId" class="form-control">
+                @foreach (var item in Model.hastaneList)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Cinsiyet")
+            <input type="radio" name="CinsiyetId" value="1" checked>Erkek
+            <input type="radio" name="CinsiyetId" value="2">Kadın
+        </div>
+
+        @*<div class="form-group">
+                @Html.Label("Cinsiyet")
+
+                @foreach (var item in Model.cinsiyetList)
+                {
+                    <input type="radio" name="CinsiyetId" value="@item.Id">@item.Name
+                }
+            </div>*@
+
+
+        <div class="form-group">
+            @Html.ActionLink("<< Geri Dön", "Index", "Doctor", new { @class = "btn btn-default" })
+            <input type="submit" value="Kaydet" class="btn btn-success" />
+
+        </div>
+    </div>
+}

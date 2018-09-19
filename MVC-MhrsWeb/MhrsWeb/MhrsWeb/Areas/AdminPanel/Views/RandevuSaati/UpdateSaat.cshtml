@@ -1,0 +1,50 @@
+﻿@model MhrsWeb.Areas.AdminPanel.Models.RandevuSaatiViewModel
+
+@{
+    ViewBag.Title = "UpdateTarihi";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+
+<form action="@Url.Action("TransferPostMethod","RandevuSaati")" method="POST">
+
+    <div class="form-horizontal">
+        <h4>Doktor Saatlerini Güncelle > @Model.doktor.FullName (@DateTime.Parse(@Model.secilenRandevuTarihi).ToShortDateString())</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <hr />
+
+        <input type="hidden" id="@Model.doktor.Id" name="Id" value="@Model.doktor.Id" />
+        <input type="hidden" id="RandevuTarihi" name="RandevuTarihi" value="@Model.secilenRandevuTarihi" />
+        <div class="row">
+                <div class="col-md-12">
+                    <div class="from group">
+                        @foreach (var item in Model.randevuSaatleri)
+                        {
+                            <div class="col-md-4">
+                                @if (Model.doktorSaatTarihList.Any(x => x.RandevuSaatiId == item.Id && x.RandevuTarihi.ToShortDateString() == Model.secilenRandevuTarihi && x.Durum == true))
+                                {
+                                    <input type="checkbox" checked name="Saat" value="@item.Id">@item.Saat
+                                }
+                                else
+                                {
+                                    <input type="checkbox" name="Saat" value="@item.Id">@item.Saat
+                                }
+                            </div>
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        <div class="form-group">
+            <a href="@Url.Action("Index","RandevuSaati")" class="btn btn-default"><< Geri Dön</a>
+            <input type="submit" @Url.Action("SaatleriGuncelle", "RandevuSaati") , value="Saatleri Güncelle" class="btn btn-primary" />
+        </div>
+    </div>
+
+</form>

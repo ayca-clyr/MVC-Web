@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+
+        /* Her Bir Elemente DOM diyoruz.*/
+        #kutu{
+            width:100px;
+            height:100px;
+            background-color:red;
+            margin:10px;
+            
+            transition:all 2s  cubic-bezier(0.36, 1.44, 0.55, -0.4);
+        }
+
+    </style>
+</head>
+<body>
+    <input type="button"value="Saati Göster" onclick="saatGoster()" />
+    <input type="button"value="Kare Al" onclick="alert(KareAl(5))" />
+    <input type="button" value="Topla2" onclick="Topla(3,5)" />
+    <input type="button" value="Topla3" onclick="Topla(3,5,8)" />
+    <br />
+    <br />
+
+    <input type="button" value="KutuyuGizle" onclick="KutuyuGizle()" />
+    <input type="button" value="KutuyuGöster" onclick="KutuyuGoster()" />
+    <br />
+    <br />
+    <input type="button" value="Divi Kaydır" onclick="DiviKaydır()" />
+    <input type="button" value="Kutuya Yaz" onclick="KutuyaYaz()" />
+    <input type="button" value="Divi Başa Getir" onclick="BasaGetir()" />
+    <div id="kutu">
+        <input type="button" value="Buton" />
+    </div>
+
+    <hr />
+
+    <button onclick="Kapat()">
+        Sekmeyi Kapat
+    </button>
+
+    <script>
+        // FUNCTIONS
+        /*
+        C#
+        public int FonksiyonIsmi(int a){
+            return 56;
+        }
+
+        */
+        function saatGoster() {
+            alert(new Date())
+        }
+        function KareAl(x) {
+            return x * x;
+        }
+
+        function Topla(sayı1, sayı2) {
+            return sayı1 + sayı2;
+        }
+       
+        function Topla(sayı1, sayı2,sayı3) {
+            return sayı1 + sayı2 + sayı3;
+        }
+
+        // DOM (Documnet Object Model)
+
+        function KutuyuGizle() {
+            var element = document.getElementById("kutu");  // Bu elemente ait özellikleri artık burdan da yönetebilirim.
+            //element.style.display = "none";  // Buton gizle.
+            //element.style.backgroundColor = "blue";
+            
+            element.style.opacity = "0";  // Opak saydamlaştırır. // Aynı isimde çok id olabilir o yüzden iyi metot değildir.
+        }
+        function KutuyuGoster() {
+            //var element = document.getElementById("kutu");
+            //element.style.display = "block";  
+            kutu.style.opacity = "1"; // opaklığını değiştirir. Görünü yapar.
+        }
+
+        function DiviKaydır() {
+            if (document.getElementById("kutu").style.marginLeft == "300px") {
+                alert("Zaten Divi Kaydırdınız!");
+            } else {
+                document.getElementById("kutu").style.marginLeft = "300px";
+            }
+          
+        }
+
+        function BasaGetir() {
+            if (document.getElementById("kutu").style.marginLeft == "0px") {
+                alert("Zaten Başta!");
+            }else{
+
+            document.getElementById("kutu").style.marginLeft = "0px";
+            }
+        }
+
+        function KutuyaYaz() {
+            document.getElementById("kutu").innerHTML = "<a href='http://google.com'>GOOGLE</a> "  // Butona tıklayınca GOOGLE geliyor.
+            //document.getElementById("kutu").innerHTML += "<a href='http://google.com'>GOOGLE</a>" // += dediğimiz için Buton + GOOGLE oluyor
+
+            document.getElementById("kutu").innerHTML += "<br /> " + Math.floor(55 + Math.random() * 10);  // Aradaki farka göre çarp. sonra ilk değeri ekle   Küçük sayı + Random* (Büyük-Küçük)
+        }
+        
+        console.log("Consol'a yazı yazdık");
+        console.warn("Uyarı: Loglar içerisinde daha belirgin göstermek için : Başka kullanımları için ARAŞTIRIN");
+        var sayı = 123.4556;
+        console.log(Math.floor(sayı)); // aşşağı
+        console.log(Math.ceil(sayı));  //yukaruı
+        console.log(Math.round(sayı));  // nereye yakınsa
+
+        console.log(Math.random);    // 0-1 arasında random değer aratır.
+
+        // BOM (Browser Object Model)
+
+        /*
+            Window
+            Screen
+            Location
+            History
+            Navigator
+            Popup Alert
+            Timing
+            Cookies
+        */
+
+
+        function Kapat() {
+            // HTMl içindekilerin hepsi DOM, onun document içindekiler BOM.
+            //window.close(); // Direk Sayfayı kapatıyor.
+            //alert(window.location.hostname);
+            history.back();  // Önce google aç sonra geri dön kodu çalıştır.
+        }
+
+
+    </script>
+</body>
+</html>

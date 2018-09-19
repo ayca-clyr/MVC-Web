@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+
+    if (Session["User"] != null)
+    {
+        Login login = (Login)Session["User"];
+        string FullName = login.Kullanici.Name + " " + login.Kullanici.Surname;
+        <h4 style="color:green"><b>Hoşgeldiniz @FullName</b></h4>
+    }
+}

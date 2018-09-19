@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JS Uygulama</title>
+
+    <!--1 Bu üç linkin sıraları onemli-->
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        article {
+            padding: 2%;
+            box-sizing: border-box;
+        }
+
+            article form input {
+                margin-top: 2%; /*text araları acılsın diye*/
+            }
+
+            article form button {
+                margin-top: 2%; /* buton araları acılsın diye*/
+            }
+    </style>
+
+
+</head>
+<body onload="GetDepartmentFromLocalStorage()">
+    <!--Loadına datalar geliyor.-->
+    <!--2. Bootstrap Snippet Pack ekliyoruz-->
+    <!--3. CTRL + kx -> Bootstrap -> Navigation Bar(ÜST MENÜ)-->
+
+    <div class="container">
+        <header class="row">
+
+
+            <!--Üst Menü-->
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!--<a class="navbar-brand" href="#">Brand</a>-->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Person Management<span class="sr-only">(current)</span></a></li>
+
+                            <!--
+                                Person :
+                                    Id
+                                    FirstName
+                                    LastName
+                                    Phones
+                                    + Department
+                                 -->
+
+
+                            <li><a href="department.html">Department Managment</a></li>
+                            
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+
+        </header>
+
+        <section class="row">
+            <article class="col-md-5">
+                <form>
+                    <input class="form-control" type="text" name="name" id="name" value="" placeholder="Name...." />
+
+                    <input class="form-control" type="text" name="description" id="description" value="" placeholder="Description...." />
+
+                    <button class="btn btn-success" type="button" onclick="SaveDepartment(event)">Save</button> 
+                </form>
+
+            </article>
+
+            <aside class="col-md-7">
+                <table id="department-list" class="table table-hover">
+                    <!--hover mause üzerine gelince ne olacagıyla ilgili-->
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </aside>
+        </section>
+
+    </div>
+
+
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+
+    <script>
+        var currentDepartmentId = 1; //otomatik artan bir değer lazım
+
+        var Department = function () {
+            this.Id = 0;
+            this.Name = "";
+            this.Description = "";
+           
+        }
+
+       
+      
+        //Kişilerin listesi
+        var departmentList = [];
+
+        //inner demek içi, outher kendi ile içi.
+
+        function SaveDepartment(event) {
+           
+           
+
+            event.preventDefault();// Sayfanın yenilenmemesi için
+          
+            event.stopPropagation(); 
+
+            var newDepartment;
+
+            var isUpdate = false;
+
+            if (event.target.getAttribute("data-departmentId")) {
+                // data-personId'de değer varsa
+                for (var i = 0; i < departmentList.length; i++) {
+                    if (departmentList[i].Id == event.target.getAttribute("data-departmentId")) {
+                        newDepartment = departmentList[i];
+                        isUpdate = true;
+                        break;
+                    }
+                }
+            }
+            else {
+              
+                newDepartment = new Department();
+                newDepartment.Id = currentDepartmentId++;
+            }
+
+
+            newDepartment.Name = document.getElementById("name").value; 
+
+            newDepartment.Description = document.getElementById("description").value;  
+
+
+          
+
+          
+            if (!isUpdate) {
+
+
+                departmentList.push(newDepartment) 
+            }
+            else {
+                
+                ClearForm(document.querySelector("form .btn-danger"));
+
+            }
+            ClearForm();
+
+            RefreshList();
+
+
+            alert("Başarıyla Kaydedilmiştir!");
+            SaveDepartmentToLocalStorage();
+        }
+
+        function ClearForm(cancelButton) {
+          
+            var formInputs = document.querySelectorAll("form input[type=text]");
+            for (var i = 0; i < formInputs.length; i++) {
+                formInputs[i].value = "";
+            }
+
+            
+           
+          
+
+            if (cancelButton) {
+                cancelButton.remove();
+            }
+            document.querySelector("form button").textContent = "Save";
+            document.querySelector("form button").removeAttribute("data-departmentId");
+
+
+        }
+        function RefreshList() {
+          
+
+            var table = document.getElementById("department-list")
+            table.tBodies[0].innerHTML = ""; //Varsa sil
+
+            for (var i = 0; i < departmentList.length; i++) { //Listeyi don.
+
+                var tr = document.createElement("tr");//Satır oluşturdum
+
+
+                
+                var tdName = document.createElement("td");
+                tdName.textContent = departmentList[i].Name; 
+                tr.appendChild(tdName); //satırın ilk sutununa ekledim.
+
+                //LastName
+                var tdDescription = document.createElement("td");
+                tdDescription.textContent = departmentList[i].Description;
+                tr.appendChild(tdDescription);
+               
+                //# (İşlemler)
+                var tdOther = document.createElement("td");
+                tdOther.innerHTML = "<a href='#' onclick='FillForm({DEPARTMENTID}, event)'>Update</a> | <a href='#' onclick='RemoveDepartment({DEPARTMENTID}, event)'>Remove</a>".replace("{DEPARTMENTID}", departmentList[i].Id)
+                .replace("{DEPARTMENTID}", departmentList[i].Id);
+
+                tr.appendChild(tdOther);
+
+                table.tBodies[0].appendChild(tr);
+
+            }
+        }
+
+        function FillForm(id, event) {
+            ClearForm();
+            
+            event.preventDefault();
+
+            var department;
+            for (var i = 0; i < departmentList.length; i++) {
+
+                if (departmentList[i].Id == id) {  // Tek eşittirde direk atama yapıyor ve if'i direk çalıştırır. Ama iki eşittirde
+                    department = departmentList[i];
+                    break;
+                }
+            }
+            document.getElementById("name").value = department.Name;
+            document.getElementById("description").value = department.Description;
+           
+
+           
+
+              
+
+            var saveButton = document.querySelector("form button");
+            saveButton.textContent = "Update";  // text.content yukardaki Save olan elementler arası yazı demek.
+
+            var cancelButton = document.createElement("button");
+            cancelButton.className = "btn btn-danger";
+            cancelButton.textContent = "Cancel";
+            cancelButton.addEventListener("click", function () {
+                ClearForm(this);  // this = cancelButton
+            });
+            // Birden fazla Cancel butonu eklenmesini önlemek adına bu alttaki koşulu ekledik.
+            if (document.querySelectorAll("form button").length < 2) {  // Tıkladıktan sonra oluşan buton sayısını 2 yaptık 2'den fazla yapmıcaz.
+                saveButton.after(cancelButton);  // after: Hemen sonrasına ekliyor.
+            }
+
+
+            saveButton.setAttribute("data-departmentId", department.Id.toString());
+
+        }
+
+        function RemoveDepartment(id, event) {
+            event.preventDefault();
+
+            var result = confirm("Are you sure about killing this guys information? :/") //MessageBox gibi true,false gibi.
+            if (result) {
+                for (var i = 0; i < departmentList.length; i++) {
+                    if (departmentList[i].Id == id) {
+                        departmentList.splice(i, 1);
+                        break;
+
+                    }
+
+                }
+            }
+            RefreshList();
+            SaveDepartmentToLocalStorage();
+        }
+
+        function SaveDepartmentToLocalStorage() {
+            localStorage.setItem("currentDepartmentId", currentDepartmentId);
+            localStorage.setItem("departmentList", JSON.stringify(departmentList));  // Direk JSON'a çeviriyor.
+
+        }
+
+        function GetDepartmentFromLocalStorage() {
+            if (localStorage.getItem("departmentList")) {
+                var stringJSON = localStorage.getItem("departmentList");
+                departmentList = JSON.parse(stringJSON);
+                RefreshList();
+
+            }
+            if (localStorage.getItem("currentDepartmentId ")){
+                currentDepartmentId = parseInt(localStorage.getItem("currentDepartmentId"));
+            }
+            RefreshList();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

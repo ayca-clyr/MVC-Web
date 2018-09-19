@@ -1,0 +1,17 @@
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\bin\161114_MVC_HelloWorld.dll.config
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\bin\161114_MVC_HelloWorld.dll
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\bin\161114_MVC_HelloWorld.pdb
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\bin\System.Web.Helpers.dll
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\bin\System.Web.Mvc.dll
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\bin\System.Web.Razor.dll
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\bin\System.Web.Webpages.Deployment.dll
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\bin\System.Web.Webpages.dll
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\bin\System.Web.Webpages.Razor.dll
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\bin\System.Web.Razor.xml
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\bin\System.Web.Webpages.xml
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\bin\System.Web.Webpages.Deployment.xml
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\bin\System.Web.Webpages.Razor.xml
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\bin\System.Web.Helpers.xml
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\bin\System.Web.Mvc.xml
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\obj\Debug\161114_MVC_HelloWorld.dll
+c:\users\ba\documents\visual studio 2013\Projects\161114_MVC\161114_MVC_HelloWorld\obj\Debug\161114_MVC_HelloWorld.pdb

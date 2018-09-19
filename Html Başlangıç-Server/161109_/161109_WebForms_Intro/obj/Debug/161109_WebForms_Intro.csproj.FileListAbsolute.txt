@@ -1,0 +1,6 @@
+c:\users\ba\documents\visual studio 2013\Projects\161109_\161109_WebForms_Intro\bin\161109_WebForms_Intro.dll.config
+c:\users\ba\documents\visual studio 2013\Projects\161109_\161109_WebForms_Intro\bin\161109_WebForms_Intro.dll
+c:\users\ba\documents\visual studio 2013\Projects\161109_\161109_WebForms_Intro\bin\161109_WebForms_Intro.pdb
+c:\users\ba\documents\visual studio 2013\Projects\161109_\161109_WebForms_Intro\obj\Debug\161109_WebForms_Intro.csprojResolveAssemblyReference.cache
+c:\users\ba\documents\visual studio 2013\Projects\161109_\161109_WebForms_Intro\obj\Debug\161109_WebForms_Intro.dll
+c:\users\ba\documents\visual studio 2013\Projects\161109_\161109_WebForms_Intro\obj\Debug\161109_WebForms_Intro.pdb

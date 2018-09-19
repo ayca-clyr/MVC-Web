@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        // Dinamiklik
+
+        // 1. Değişkenlerin kesin tipleri yoktur.
+        var number = 10;   //number
+        number = "mahmut"  // string
+        number = true;     // boolean
+
+        // 2. Nesnelere sahip olmadıkları bir field ekleyebiliyorum.
+        var person = { FirstName: "Serkan", LastName: "Soydam" };
+        //alert(person.FirstName + " " + person.LastName);
+
+        person.Age = 25;
+
+        //alert (person.FirstName + " " + person.LastName + "("+ person.Age +")");
+
+        // 3. Fonksiyonlarda yazılmamış parametrelere değer göndermek zorunda değiliz.
+
+        function getFullName(firstName, lastName) {
+            if (firstName == undefined && lastName == undefined) {
+                return "Parametre gelmedi"
+            }
+            
+            return firstName + " " + lastName;
+        }
+        //alert(getFullName("Aydın", "Ayaydın"));
+        //alert(getFullName());
+
+        // 4. Fonksiyon parametre almasa da parametre gönderebiliriz.
+        
+        function SayılarıTopla(ogr) {
+            var toplam = 0;
+            // arguments : parametre olarak gönderilen tanımlı veya tanımsız bütün değerlerin bulunduğu dizidir.
+            alert(ogr) // --> 2  Bu bizi 2 verir. Yani ogr demek argümentslerdeki ilkinin değeridir.
+            for (var i = 0; i < arguments.length; i++) {
+                toplam += arguments[i];
+            }
+
+            return toplam;
+        }
+
+        alert(SayılarıTopla(2, 3, 4, 7)); // --> 16
+
+        function SayılarıTopla() {
+            var toplam = 0;
+
+            for (var i = 0; i < arguments.length; i++) {
+                toplam += arguments[i];
+            }
+
+            return toplam;
+        }   
+
+        alert(SayılarıTopla(2, 3, 4)); // --> 9
+        alert(SayılarıTopla(2,3,4,"4")) // --> 94
+        alert(SayılarıTopla());  --> 0
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

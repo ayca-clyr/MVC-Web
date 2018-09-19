@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+   
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#uye_formu").on("keyup", function (event) {
+                form_kontrolu();
+            });
+        });
+        var form_kontrolu = function () {
+            var adi = $("#adi").val();
+            var soyadi = $("#soyadi").val();
+            var tc = $("#tc").val();
+            var sifre1 = $("#sifre1").val();
+            var sifre2 = $("#sifre2").val();
+            var email = $("#email").val();
+            var atpos = email.indexOf("@");
+            var dotpos = email.lastIndexOf(".");
+            var cinsiyet = $("#cinsiyet").val();
+            if (adi == null || adi == "" )
+                $('.uyari').html("Lütfen Adınızı boş bırakmayınız.");
+
+            else if(soyadi == null || soyadi=="")
+                $('.uyari').html("Lütfen Soyadınızı boş bırakmayınız!")
+                else if(tc == null || tc=="")
+                $('.uyari').html("Lütfen Tc Kimlik Numaranızı boş bırakmayınız!")
+            else if (sifre1 == null || sifre1 == "" || sifre2 == null || sifre2 == "")
+                $('.uyari').html("Lütfen Şifreyi boş bırakmayın");
+            else if (!(sifre1 == sifre2))
+                $('.uyari').html("Şifreler eşleşmiyor");
+            else if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.length)
+                $('.uyari').html("Lütfen Geçerli email adresi girin");
+            else {
+                $('.uyari').empty();
+                //$('#uye_formu').removeAttr('onsubmit');
+            }
+        }
+    </script>
+
+
+    <style>
+        #uyelik_formu {
+            padding: 10px;
+            width: 400px;
+            /*border: 1px solid black;*/
+        }
+
+        label {
+            float: left;            
+            width: 150px;
+        }
+            .baslik {
+            background: #333;
+            color: #fff;
+            padding: 5px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <form name="form" id="uye_formu" action="jquery_form_kontrolu_post" method="post" onsubmit="return false;">
+            <div class="row">
+                <div class="col-md-12  baslik">Üye Paneli</div>
+                <br />
+                <br />
+            </div>
+            <div class="form-group">
+                <label> Adı:</label>
+                <input type="text" id="adi" name="adi">
+            </div>
+                <br>
+            <div class="form-group">
+                <label> Soyadı:</label>
+                <input type="text" id="soyadi" name="soyadi">
+            </div>
+            <br>
+            <div class="form-group">
+                <label> Tc Kimlik:</label>
+                <input type="text" id="tc" name="tc">
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Şifre:</label>
+                <input type="password" id="sifre1" name="sifre1">
+                </div>
+                <br>
+            <div class="form-group">
+                <label>Şifre (Tekrar):</label>
+                <input type="password" id="sifre2" name="sifre2">
+                </div>
+                <br>
+            <div class="form-group">
+                <label>E-Mail:</label>
+                <input type="text" id="email" name="email">
+                </div>
+                <br>
+            <div class="form-group">
+                <label>Cinsiyet</label>
+                <input type="radio" id="cinsiyet" name="cinsiyet">Kadın
+                <input type="radio" id="cinsiyet" name="cinsiyet">Erkek
+                <input type="radio" id="cinsiyet" name="cinsiyet">Diğer
+
+            </div>
+            <br>
+
+            <div class="form-group">
+                <input type="submit" value="Kaydet">
+                </div>
+</form>
+        <div class="uyari"></div>
+    </div>
+    
+</body>
+</html>

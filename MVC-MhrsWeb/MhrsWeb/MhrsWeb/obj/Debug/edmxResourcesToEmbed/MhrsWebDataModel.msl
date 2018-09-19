@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MhrsWebDBModelStoreContainer" CdmEntityContainer="MhrsWebDBEntities">
+    <EntitySetMapping Name="Cinsiyet">
+      <EntityTypeMapping TypeName="MhrsWebDBModel.Cinsiyet">
+        <MappingFragment StoreEntitySet="Cinsiyet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Command">
+      <EntityTypeMapping TypeName="MhrsWebDBModel.Command">
+        <MappingFragment StoreEntitySet="Command">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doktor">
+      <EntityTypeMapping TypeName="MhrsWebDBModel.Doktor">
+        <MappingFragment StoreEntitySet="Doktor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="CinsiyetId" ColumnName="CinsiyetId" />
+          <ScalarProperty Name="UzmanlıkId" ColumnName="UzmanlıkId" />
+          <ScalarProperty Name="HastaneId" ColumnName="HastaneId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hastane">
+      <EntityTypeMapping TypeName="MhrsWebDBModel.Hastane">
+        <MappingFragment StoreEntitySet="Hastane">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IlceId" ColumnName="IlceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hastane_Klinik">
+      <EntityTypeMapping TypeName="MhrsWebDBModel.Hastane_Klinik">
+        <MappingFragment StoreEntitySet="Hastane_Klinik">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="HastaneId" ColumnName="HastaneId" />
+          <ScalarProperty Name="KlinikId" ColumnName="KlinikId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ilce">
+      <EntityTypeMapping TypeName="MhrsWebDBModel.Ilce">
+        <MappingFragment StoreEntitySet="Ilce">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SehirId" ColumnName="SehirId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Klinik">
+      <EntityTypeMapping TypeName="MhrsWebDBModel.Klinik">
+        <MappingFragment StoreEntitySet="Klinik">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kullanici">
+      <EntityTypeMapping TypeName="MhrsWebDBModel.Kullanici">
+        <MappingFragment StoreEntitySet="Kullanici">
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="CinsiyetId" ColumnName="CinsiyetId" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="CommandId" ColumnName="CommandId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Login">
+      <EntityTypeMapping TypeName="MhrsWebDBModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Randevu">
+      <EntityTypeMapping TypeName="MhrsWebDBModel.Randevu">
+        <MappingFragment StoreEntitySet="Randevu">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="LoginTC" ColumnName="LoginTC" />
+          <ScalarProperty Name="Hastane_Klinik_Id" ColumnName="Hastane_Klinik_Id" />
+          <ScalarProperty Name="DoktorId" ColumnName="DoktorId" />
+          <ScalarProperty Name="RandevuSaatiId" ColumnName="RandevuSaatiId" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RandevuSaati">
+      <EntityTypeMapping TypeName="MhrsWebDBModel.RandevuSaati">
+        <MappingFragment StoreEntitySet="RandevuSaati">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Saat" ColumnName="Saat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RandvuSaati_Doktor">
+      <EntityTypeMapping TypeName="MhrsWebDBModel.RandvuSaati_Doktor">
+        <MappingFragment StoreEntitySet="RandvuSaati_Doktor">
+          <ScalarProperty Name="RandevuTarihi" ColumnName="RandevuTarihi" />
+          <ScalarProperty Name="RandevuSaatiId" ColumnName="RandevuSaatiId" />
+          <ScalarProperty Name="DoktorId" ColumnName="DoktorId" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sehir">
+      <EntityTypeMapping TypeName="MhrsWebDBModel.Sehir">
+        <MappingFragment StoreEntitySet="Sehir">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MhrsWebDBModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

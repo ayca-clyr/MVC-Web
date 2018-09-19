@@ -1,0 +1,53 @@
+﻿@model List<Entities.Project>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+
+<div class="x_panel">
+    <div class="x_content">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Proje Adı</th>
+                    <th>Açıklaması</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Title</td>
+                            <td>@item.Description</td>
+                            <td>
+                                <div class="btn-group  btn-group-sm">
+                                    <a href="@Url.Action("ProjectUpdate","Project", new { Id = item.Id })" class="btn btn-default">Güncelle</a>
+                                    <button name="@item.Id" class="btn btn-default Sil">Sil</button>
+                                </div>
+                            </td>
+
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+@section javascript{
+    <script type="text/javascript">
+
+    $(document).ready(function () {
+        $(".Sil").click(function () {
+            if (confirm("Silmek istediğinize emin misiniz?")) {
+                var Id = $(this).attr('name');
+                window.location ="/AdminPanel/Project/ProjectDelete/"+Id
+            }
+        });
+    });
+    </script>
+}

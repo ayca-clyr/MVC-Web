@@ -1,0 +1,51 @@
+﻿@*@model List<_161114_MVC_HelloWorld.Models.Player>*@
+@using _161114_MVC_HelloWorld.Models
+@model List<Player>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <header class="container">
+        <h1 class="page-header">All Players</h1>
+    </header>
+    <section class="container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                  
+                    <th>Adı</th>
+                    <th>Soyadı</th>
+                    <th>Forma</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <tr>
+                        <td>@Model[i].FirstName</td>
+                        <td>@Model[i].LastName</td>
+                        <td>@Model[i].ShirtNumber</td>
+                        <td><a href="/Player/Detail/@Model[i].Id">Detayla</a></td>
+
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+    </section>
+</body>
+</html>

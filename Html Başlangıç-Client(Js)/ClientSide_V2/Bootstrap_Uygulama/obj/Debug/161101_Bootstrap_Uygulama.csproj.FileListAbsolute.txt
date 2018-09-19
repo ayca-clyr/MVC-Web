@@ -1,0 +1,5 @@
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\Bootstrap_Uygulama\bin\Bootstrap_Uygulama.dll.config
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\Bootstrap_Uygulama\bin\Bootstrap_Uygulama.dll
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\Bootstrap_Uygulama\bin\Bootstrap_Uygulama.pdb
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\Bootstrap_Uygulama\obj\Debug\Bootstrap_Uygulama.dll
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\Bootstrap_Uygulama\obj\Debug\Bootstrap_Uygulama.pdb

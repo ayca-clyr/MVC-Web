@@ -1,0 +1,35 @@
+﻿@model MhrsWeb.Areas.AdminPanel.Models.RandevuSaatiViewModel
+
+@{
+    ViewBag.Title = "TarihSec";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+
+<form action="@Url.Action("TarihleriKaydet","Tarih")" method="POST">
+
+    <div class="form-horizontal">
+        <h4>Doktor Tarih Seç > @Model.doktor.FullName</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="from group">
+            @Html.Label("Çalışacağı Tarih")
+            <select name="CalismaTarihi" id="CalismaTarihi" class="form-control">
+                @foreach (var item in Model.tarihListesi15)
+                {
+                    <option selected value="@item.ToShortDateString()">@item.ToShortDateString()</option>
+                }
+            </select>
+        </div>
+        <hr />
+
+        <input type="hidden" id="@Model.doktor.Id" name="Id" value="@Model.doktor.Id" />
+
+
+        <div class="form-group">
+            <a href="@Url.Action("Index","RandevuSaati")" class="btn btn-default"><< Geri Dön</a>
+            <input type="submit" value="Tarih Ekle" class="btn btn-primary" />
+        </div>
+    </div>
+
+</form>

@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebForms_Uygulama.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <%--Yapacagım tum syfalar burdan kalıtım alacak gibi bir durum soz konusu--%>
+    <%--Dİzayn buradaki gibi olacak sadece değiştirilecek olan ksım içinde eklemeler yapabileceğim--%>
+
+    <%-- <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>--%>
+
+    <%--CONTENT İÇİNDEKİ min al buraya--%>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <%--  BURATI AYNEN ALIP AŞAGI YAPIŞTIRIYORUZ
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">      
+        </asp:ContentPlaceHolder>--%>
+
+    <%--CategoryEditForm içini aldık--%>
+
+    <form id="form1" runat="server">
+        <div class="container">
+            <header class="well">
+                <h1>Northwind Inc.</h1>
+            </header>
+            <section>
+                <div class="row">
+                    <nav class="col-xs-12 col-sm-4 col-md-3">
+                        <div class="list-group">
+                            <a class="list-group-item" href="CategoryListForm.aspx">Kategoriler</a>
+                            <a class="list-group-item" href="ProductListForm.aspx">Ürünler</a>
+                        </div>
+                    </nav>
+                    <div class="col-xs-12 col-sm-8 col-md-9" style="min-height: 600px">
+                        <%--Değişiklikler Burada Yaıplacak--%>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="well text-center">&copy;2016 Northwind Ins Şirketi Resmi Yönetim Sayfası</footer>
+
+        </div>
+    </form>
+
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+</body>
+</html>

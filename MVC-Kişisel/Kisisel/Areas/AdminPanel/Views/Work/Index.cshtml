@@ -1,0 +1,57 @@
+﻿@model List<Entities.Work>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+
+<div class="x_panel">
+    <div class="x_content">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>İş Adı</th>
+                    <th>Görevi</th>
+                    <th>Başlangıç Tarihi</th>
+                    <th>Bitiş Tarihi</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.Branch</td>
+                            <td>@item.DateOfStart</td>
+                            <td>@item.DateOfEnd</td>
+                            <td>
+                                <div class="btn-group  btn-group-sm">
+                                    <a href="@Url.Action("WorkUpdate","Work", new { Id = item.Id })" class="btn btn-default">Güncelle</a>
+                                    <button name="@item.Id" class="btn btn-default Sil">Sil</button>
+                                </div>
+                            </td>
+
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+@section javascript{
+    <script type="text/javascript">
+
+    $(document).ready(function () {
+        $(".Sil").click(function () {
+            if (confirm("Silmek istediğinize emin misiniz?")) {
+                var Id = $(this).attr('name');
+                window.location ="/AdminPanel/Work/WorkDelete/"+Id
+            }
+        });
+    });
+    </script>
+}

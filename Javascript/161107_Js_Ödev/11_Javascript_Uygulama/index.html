@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JS Uygulama</title>
+
+    <!--1 Bu üç linkin sıraları onemli-->
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        article {
+            padding: 2%;
+            box-sizing: border-box;
+        }
+
+            article form input {
+                margin-top: 2%; /*text araları acılsın diye*/
+            }
+
+            article form button {
+                margin-top: 2%; /* buton araları acılsın diye*/
+            }
+    </style>
+
+
+</head>
+<body onload="GetPeopleFromLocalStorage()">
+    <!--Loadına datalar geliyor.-->
+    <!--2. Bootstrap Snippet Pack ekliyoruz-->
+    <!--3. CTRL + kx -> Bootstrap -> Navigation Bar(ÜST MENÜ)-->
+
+    <div class="container">
+        <header class="row">
+
+
+            <!--Üst Menü-->
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!--<a class="navbar-brand" href="#">Brand</a>-->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Person Management<span class="sr-only">(current)</span></a></li>
+
+                            <!--
+                                Person :
+                                    Id
+                                    FirstName
+                                    LastName
+                                    Phones
+                                    + Department
+                                 -->
+
+
+                            <li><a href="department.html">Department Managment</a></li>
+                            <!--
+                               + Department :
+                                    + Id
+                                    + Name
+                                    + Description
+                            -->
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+
+        </header>
+
+        <section class="row">
+            <article class="col-md-5">
+                <form>
+                    <input class="form-control" type="text" name="firstName" id="firstName" value="" placeholder="Name...." />
+
+                    <input class="form-control" type="text" name="lastName" id="lastName" value="" placeholder="Surname...." />
+
+
+                    <!--Birden fazla telefon eklenebilir olması için-->
+                    <div id="phone-area">
+                        <div class="form-inline" data-osman="kalıcı">
+                            <!--hepsini yanyana al dedik.butonlar phone text yanında olması için-->
+                            <input class="form-control" type="text" name="Phone" value="" placeholder="Phone...." />
+                            <input type="button" class="btn btn-success" value="+" onclick="AddPhoneBlock(this)" /> <!--AddPhoneBlock(this).This burdaki inputtski değer oluyorbuton tıklanınca metot çalışacak-->
+                            <!--<input type="button" class="btn btn-warning" value="-" onclick="RemovePhoneBlock(this)"/>-->
+                            <!--ilk basta olmasın sonradan eklnesin silme butonu-->
+                        </div>
+                    </div>
+
+                    <br />
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+                    <br />
+
+                    <button class="btn btn-success" type="button" onclick="SavePerson(event)">Save</button> <!--SavePerson metodunu çağırır.-->
+                </form>
+
+            </article>
+
+            <aside class="col-md-7">
+                <table id="people-list" class="table table-hover">
+                    <!--hover mause üzerine gelince ne olacagıyla ilgili-->
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th>Phone</th>
+                            <th>#</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </aside>
+        </section>
+
+    </div>
+
+
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+ 
+    <script src="Scripts/default.js"></script>
+</body>
+</html>

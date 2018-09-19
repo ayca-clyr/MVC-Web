@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
+    <style>
+        .container {
+            border: 1px solid #d3d3d3;
+            padding: 10px;
+            background: #eee;
+            font: 12px Arial, Tahoma, Verdana;
+            text-align: left;
+            width: 500px;
+        }
+
+        .baslik {
+            background: #333;
+            color: #fff;
+            padding: 5px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .adi {
+            text-align: left;
+        }
+
+
+        .buton {
+            float: right;
+            margin-right: 25px;
+            border: 1px solid #666;
+            padding: 2px 5px;
+            background: cornflowerblue;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .form-horizontal {
+            margin: 10px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#container").on("keyup", function (event) {
+                formKontrol()
+            })
+
+        })
+
+        var formKontrol = function () {
+            var adi = $(inputAdı).val();
+            var soyadi = $(inputSoyadı).val();
+            var tc = $(inputTc).val();
+            var email = $(inputEmail3).val();
+            var atpos = email.indexOf("@");
+            var dotpos = email.lastIndexOf(".");
+            var sifre = $(inputŞifre).val();
+            var sifreTekrar = $(inputŞifreTekrar).val();
+            var cinsiyet = $(cinsiyet).val();
+
+
+            if (adi == null || adi == "")
+                $('.mesaj').html("Ad Boş Geçilemez")
+            else if (soyadi == null || soyadi == "")
+                $('.mesaj').html("Soyad Boş Geçilemez")
+            else if (tc == null || tc == "")
+                $('.mesaj').html("Tc Boş Geçilemez")
+            else if(cinsiyet == null || cinsiyet == "")
+                $('.mesaj').html("Cinsiyet Boş Geçilemez")
+            else if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.length)
+                $('.mesaj').html("Geçerli Email Adresi Giriniz!")
+            else if (!(sifre == sifreTekrar))
+                $('.mesaj').html("Şifreler Eşleşmiyor.")
+            else {
+                $('.mesaj').empty();
+                $('#container').removeAttr('onsubmit');
+            }
+
+            
+
+
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+    <script src="js_my.js"></script>
+
+    <div id="container">
+
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10 baslik">Üye Paneli</div>
+        </div>
+
+        <form name="form" id="container" action="jquery_form_kontol_post" method="post" onsubmit="return false;"  class="form-horizontal">
+
+
+            <div class="form-group">
+                <label for="inputAdı" class="col-sm-2 control-label">Adı</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputAdı" placeholder="Adı...">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputSoyadı" class="col-sm-2 control-label">Soyadı</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputSoyadı" placeholder="Soyadı...">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="Email...">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputTc" class="col-sm-2 control-label">Tc</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputTc" placeholder="Tc...">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputŞifre" class="col-sm-2 control-label">Şifre</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputŞifre" placeholder="Şifre...">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputŞifreTekrar" class="col-sm-2 control-label">ŞifreTekrar</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputŞifreTekrar" placeholder="ŞifreTekrar...">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="cinsiyet"> Kadın
+                        </label>
+                        <label>
+                            <input type="radio" name="cinsiyet"> Erkek
+                        </label>
+                        <label>
+                            <input type="radio" name="cinsiyet"> Diğer
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default" onclick="formKontrol()">Sign in</button>
+                </div>
+            </div>
+        </form>
+        <div class="mesaj"></div>
+
+    </div>
+
+</body>
+</html>

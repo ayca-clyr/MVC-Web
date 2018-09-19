@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "SocialAdd";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+
+<form action="@Url.Action("SocialAdd","Social")" method="post" enctype="multipart/form-data" ">
+    <span>Sosyal Ağ Ekle</span>
+
+    <div class="x_panel" style="margin-top:15px;">
+        <input type="text" id="facebook" class="form-control" name="Facebook" placeholder="Facebook Adresi Giriniz..">
+        <input type="text" id="linkedin" class="form-control" name="Instagram" placeholder="Instagram Adresi Giriniz..">
+        <input type="text" id="instagram" class="form-control" name="Linkedin" placeholder="Linkedin Adresi Giriniz..">
+        <input type="text" id="github" class="form-control" name="GitHub" placeholder="GitHub Adresi Giriniz..">
+    </div>
+
+    <div class="form-group">
+        <a href="@Url.Action("Index","Home")" class="btn btn-default pull-right">IPTAL</a>
+        <input type="submit" value="Ekle" class="btn btn-primary pull-right" />
+    </div>
+</form>
+

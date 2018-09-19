@@ -1,0 +1,224 @@
+﻿Co<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body id="6">
+    <!--document.title
+    ""
+    document.title = "Başlık"
+    "Başlık"
+    document.body
+    <body>
+        ​…
+    </body>
+    document.head
+    <head>
+        ​…
+    </head>
+    document.head.title
+    ""
+    document.head.title = "Başlık"
+    "Başlık"
+    document.head.title = "Deneme"
+    "Deneme"
+    document.til
+    undefined
+    document.title = "Deneme"
+    "Deneme"
+    document.forms
+    []
+    document.anchors
+    []
+    // a taklarını kontrol ediyor anchors
+    undefined
+    document.images
+    []
+    var inputlar = document.getElementsByTagName("input")
+    undefined
+    inputlar
+    [input, input, input, input, input, input, input, input, input, input]
+    inputlar[0].value
+    "Saati Göster"
+    inputlar.length
+    10
+    // Bütün butonlara erişiyor
+    undefined
+    for(i=0; i <inputlar.length; i++){
+    console.log(inputlar[i].value)
+    }
+    VM787:2 Saati Göster
+    VM787:2 Kare Al
+    VM787:2 Topla2
+    VM787:2 Topla3
+    VM787:2 KutuyuGizle
+    VM787:2 KutuyuGöster
+    VM787:2 Divi Kaydır
+    VM787:2 Kutuya Yaz
+    VM787:2 Divi Başa Getir
+    VM787:2 Buton
+    undefined
+    // Bütün hepsinn adlarını consola yazdırıyor
+    undefined
+    var nesne = {}
+    undefined
+    typeof(nesne)
+    "object"
+    // Süslü parantez bunu nesne yapıyor
+    undefined
+    nesne = {FirstName = "Aydın", LastName = "Ayaydın"}
+    VM988:1 Uncaught SyntaxError: Invalid shorthand property initializer
+    nesne = {FirstName : "Aydın", LastName : "Ayaydın"}
+    Object {FirstName: "Aydın", LastName: "Ayaydın"}
+    deneme.FirstName
+    VM1042:1 Uncaught ReferenceError: deneme is not defined(…)(anonymous function) @ VM1042:1
+    nesne.FirstName
+    "Aydın"
+    nesne.LastName
+    "Ayaydın"
+    var deneme = new {FirstName : "Aydın", LastName : "Ayaydın"}
+    VM1101:1 Uncaught TypeError: (intermediate value)(intermediate value) is not a constructor(…)(anonymous function) @ VM1101:1
+    var deneme = {FirstName : "Aydın", LastName : "Ayaydın"}
+    undefined
+    deneme.FirstName
+    "Aydın"
+    deneme.LastName
+    "Ayaydın"
+    typeof(deneme.FirstName)
+    "string"
+    deneme.FirstName + " "+ deneme.LastName
+    "Aydın Ayaydın"
+    deneme["FirstName"]
+    "Aydın"
+    deneme["Title"] = "Software Trainer"
+    "Software Trainer"
+    deneme
+    Object {FirstName: "Aydın", LastName: "Ayaydın", Title: "Software Trainer"}
+    deneme.Title
+    "Software Trainer"
+
+    mu5kutu
+    <div id=​"kutu" style=​"margin-left:​ 0px;​">​…​</div>​
+    document.getElementsByClassName("kutu")
+    []
+    document.getElementById("kutu")
+    <div id=​"kutu" style=​"margin-left:​ 0px;​">​…​</div>​
+    kutu = document.createElement("select")
+    <select>​</select>​
+    kutu
+    <select>​</select>​
+    document.getElementById("kutu")
+    <div id=​"kutu" style=​"margin-left:​ 0px;​">​…​</div>​
+    var element = document.getElementById("kutu")
+    undefined
+    element.appendChild(kutu)
+    <select>​</select>​
+    element
+    <div id=​"kutu" style=​"margin-left:​ 0px;​">​<input type=​"button" value=​"Buton">​<select>​</select>​</div>​
+    // Bir tane aşağı doğru ok ekledik.
+    undefined
+    // Bir elemente Id üzerinden ulaşma
+    undefined
+
+    var deneme = null
+    undefined
+    deneme
+    null
+    typeof(deneme)
+    "object"
+    // null string'in boş değeri olduğu için ve string object olduğu için sonuç object çıkıyor
+    undefined
+    // null boş olduğu değilmiş sadece null diye bir değer atadı.
+    undefined
+    var test = undefined
+    undefined
+    typeof(test)
+    "undefined"
+    // undefined diye bir tip varmış. Bu da tip olduğu için onu undefined şeklinde gösteriyor. Ama null tip değil.
+    undefined
+    var test
+    undefined
+    var a
+    undefined
+    typeof(a)
+    "undefined"
+    a
+    undefined
+    // Atanmamış değerede undefined oluyor.
+    undefined
+    null == undefined
+    true
+    null === undefined
+    false
+    // == 'de karşılaştırma ; heap kısmının boş olduğunu söylüyoruz. Primaty tiplerinin stack kısmının boş olduğunu söylüyoruz.
+    undefined
+    // null 'da adres yok diyor undefined'de adres yok bile demiyor
+    undefined
+    // Ram'da null dersek adres= null oluyor siliyor yani.Tarlaya yeni sahip atayabilirsin. undefined ise orda ne olduğunu dahi bilmediğimiz    için içinin önce null olması lazım.
+    undefined
+    // Yuakrdaki c# içindi. Javascriptte ise null demeden direk undefined olan veri tipi olarak tanımlar.
+    undefined
+    // 5 + undefined = null
+    undefined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        kişi
+        Object {Ad: "", Soyad: ""}
+        kişi.Ad
+        ""
+        kişi.Ad = "Fidan"
+        "Fidan"
+        kişi.Soyad = "Kartal"
+        "Kartal"
+        kişi
+        Object {Ad: "Fidan", Soyad: "Kartal"}
+        var biri = kişi
+        undefined
+        biri
+        Object {Ad: "Fidan", Soyad: "Kartal"}
+        biri.Ad = "Mahmut"
+        "Mahmut"
+        kişi
+        Object {Ad: "Mahmut", Soyad: "Kartal"}
+        // var biri= kişi dediğimiz için adresinin aynısını verdi. Referans tipli olduğu için. biri'ninde kişi'ninde gösterdiği değer aynıdır.  Eğer     biri değişirse içindekiherhangi bir property, haliyle kişi'de aynı şeyi gösterdiği için onunda değeri değişir.
+        undefined
+
+        kişi
+        VM46:1 Uncaught ReferenceError: kişi is not defined(…)(anonymous function) @ VM46:1
+        kişiListesi
+        Array[2]0: KişiAd: "Ayça"Soyad: "Calayır"__proto__: Object1: KişiAd: "Fidan"Soyad: "Kartal"__proto__: Objectlength: 2__proto__: Array[0]
+        typeof(kişiListesi[0])
+        "object"
+        kişiListesi[0] instanceof Kişi
+        true
+        kişiListesi instanceof Array
+        true
+
+        kişiListesi
+Array[1]0: KişiAd: "sdf"Kitabı: KitapAd: "Fareler ve İnsanlar"yazar: "Can İsmail Ateş"__proto__: ObjectSoyad: "sdf"Title: "sdf"__proto__: Objectlength: 1__proto__: Array[0]
+
+        kişiListesi
+Array[2]0: Kişi1: KişiAd: "Ozan"Kitabı: KitapSoyad: "Pişkin"Title: "Developer"__proto__: Objectlength: 2__proto__: Array[0]concat: concat()constructor: Array()copyWithin: copyWithin()entries: entries()every: every()fill: fill()filter: filter()find: find()findIndex: findIndex()forEach: forEach()includes: includes()indexOf: indexOf()join: join()keys: keys()lastIndexOf: lastIndexOf()length: 0map: map()pop: pop()push: push()reduce: reduce()reduceRight: reduceRight()reverse: reverse()shift: shift()slice: slice()some: some()sort: sort()splice: splice()toLocaleString: toLocaleString()toString: toString()unshift: unshift()Symbol(Symbol.iterator): values()Symbol(Symbol.unscopables): Object__proto__: Object
+
+
+        kişiListesi
+Array[2]0: Kişi1: KişiAd: "Ozan"Kitabı: KitapSoyad: "Pişkin"Title: "Developer"__proto__: Objectlength: 2__proto__: Array[0]concat: concat()constructor: Array()copyWithin: copyWithin()entries: entries()every: every()fill: fill()filter: filter()find: find()findIndex: findIndex()forEach: forEach()includes: includes()indexOf: indexOf()join: join()keys: keys()lastIndexOf: lastIndexOf()length: 0map: map()pop: pop()push: push()reduce: reduce()reduceRight: reduceRight()reverse: reverse()shift: shift()slice: slice()some: some()sort: sort()splice: splice()toLocaleString: toLocaleString()toString: toString()unshift: unshift()Symbol(Symbol.iterator): values()Symbol(Symbol.unscopables): Object__proto__: Object
+
+        kişiListesi
+Array[1]0: KişiAd: "sdf"Kitabı: KitapAd: "Fareler ve İnsanlar"yazar: "Can İsmail Ateş"__proto__: ObjectSoyad: "sdf"Title: "sdf"__proto__: Objectlength: 1__proto__: Array[0]
+        -->
+</body>
+</html>

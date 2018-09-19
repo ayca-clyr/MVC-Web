@@ -1,0 +1,6 @@
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161107_Javascript_Uygulama\bin\161107_Javascript_Uygulama.dll.config
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161107_Javascript_Uygulama\bin\161107_Javascript_Uygulama.dll
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161107_Javascript_Uygulama\bin\161107_Javascript_Uygulama.pdb
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161107_Javascript_Uygulama\obj\Debug\161107_Javascript_Uygulama.dll
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161107_Javascript_Uygulama\obj\Debug\161107_Javascript_Uygulama.pdb
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161107_Javascript_Uygulama\obj\Debug\161107_Javascript_Uygulama.csprojResolveAssemblyReference.cache

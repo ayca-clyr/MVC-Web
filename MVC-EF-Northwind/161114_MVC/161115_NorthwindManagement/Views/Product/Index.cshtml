@@ -1,0 +1,98 @@
+﻿@model List<Product>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ürün Listesi</title>
+
+    <link href="~/Css/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header class="well">
+            <h1>Northwind Inc.</h1>
+        </header>
+        <section>
+            <div class="row">
+                <nav class="col-xs-12 col-sm-4 col-md-3">
+                    <a href="/Employee" class="list-group-item">Çalışanlar</a>
+                    <a href="/Product" class="list-group-item">Ürünler</a>
+                    <a href="/Category" class="list-group-item">Kategoriler</a>
+                </nav>
+                <div class="col-xs-12 col-sm-8 col-md-9" style="min-height:600px">
+                    @* Değişiklik Yapılacak Kısım*@
+
+                    <h2>Ürün Listesi</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="pull-right">
+                                <a class="btn btn-default" href="/Product/AddForm">Yeni Ürün</a>
+                            </div>
+                        </div>
+                    </div>
+                    <br /><br />
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Ürün Adı</th>
+                                <th>Stok Miktarı</th>
+                                <th>Durum</th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var cls in Model)
+                            {
+                                <tr>
+                                    <td>@cls.ProductID</td>
+                                    <td>@cls.ProductName</td>
+                                    <td>@cls.UnitsInStock</td>
+                                    <td>@cls.Discontinued</td>
+                                    <td>
+                                        <a @*href="/Product/Delete/@cls.ProductID"*@ data-id="@cls.ProductID" class="btn btn-default btn-xs" onclick="DeleteProduct()">Sil</a>
+                                        <a href="/Product/UpdateForm/@cls.ProductID" class="btn btn-default btn-xs">Güncelle</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>
+        </section>
+        <footer class="well text-center">&copy; 2016 Northwind Inc. Management Panel</footer>
+    </div>
+
+
+
+    <script src="~/Css/Scripts/jquery-1.9.1.js"></script>
+    <script src="~/Css/Scripts/bootstrap.js"></script>
+
+    <script>
+    function DeteleteProduct() {
+        event.preventDefault();
+
+        var result = confirm("Bu Kişinin bilgilerini silmek istediğinize emin misiniz?");
+        if (result) {
+
+           
+
+            window.location = "/Product/Delete/" + event.target.dataset.id;
+
+           
+        }
+    }
+    </script>
+
+
+
+
+</body>
+</html>

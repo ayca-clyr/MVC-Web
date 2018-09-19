@@ -1,0 +1,30 @@
+C:\Users\BA\Documents\visual studio 2013\Projects\161109_\161110_WebForms_Uygulama\bin\161110_WebForms_Uygulama.dll.config
+C:\Users\BA\Documents\visual studio 2013\Projects\161109_\161110_WebForms_Uygulama\bin\161110_WebForms_Uygulama.dll
+C:\Users\BA\Documents\visual studio 2013\Projects\161109_\161110_WebForms_Uygulama\bin\161110_WebForms_Uygulama.pdb
+C:\Users\BA\Documents\visual studio 2013\Projects\161109_\161110_WebForms_Uygulama\obj\Debug\161110_WebForms_Uygulama.csprojResolveAssemblyReference.cache
+C:\Users\BA\Documents\visual studio 2013\Projects\161109_\161110_WebForms_Uygulama\obj\Debug\161110_WebForms_Uygulama.dll
+C:\Users\BA\Documents\visual studio 2013\Projects\161109_\161110_WebForms_Uygulama\obj\Debug\161110_WebForms_Uygulama.pdb
+C:\Users\BA\Documents\visual studio 2013\Projects\161109_\161110_WebForms_Uygulama\bin\EntityFramework.dll
+C:\Users\BA\Documents\visual studio 2013\Projects\161109_\161110_WebForms_Uygulama\bin\EntityFramework.SqlServer.dll
+C:\Users\BA\Documents\visual studio 2013\Projects\161109_\161110_WebForms_Uygulama\bin\EntityFramework.xml
+C:\Users\BA\Documents\visual studio 2013\Projects\161109_\161110_WebForms_Uygulama\bin\EntityFramework.SqlServer.xml
+C:\Users\Ayça\Downloads\161110_güncel_\161109_\161110_WebForms_Uygulama\obj\Debug\161110_WebForms_Uygulama.csprojResolveAssemblyReference.cache
+C:\Users\Ayça\Downloads\161110_güncel_\161109_\161110_WebForms_Uygulama\obj\Debug\161110_WebForms_Uygulama.dll
+C:\Users\Ayça\Downloads\161110_güncel_\161109_\161110_WebForms_Uygulama\obj\Debug\161110_WebForms_Uygulama.pdb
+C:\Users\Ayça\Downloads\161110_güncel_\161109_\161110_WebForms_Uygulama\bin\161110_WebForms_Uygulama.dll.config
+C:\Users\Ayça\Downloads\161110_güncel_\161109_\161110_WebForms_Uygulama\bin\161110_WebForms_Uygulama.dll
+C:\Users\Ayça\Downloads\161110_güncel_\161109_\161110_WebForms_Uygulama\bin\161110_WebForms_Uygulama.pdb
+C:\Users\Ayça\Downloads\161110_güncel_\161109_\161110_WebForms_Uygulama\bin\EntityFramework.dll
+C:\Users\Ayça\Downloads\161110_güncel_\161109_\161110_WebForms_Uygulama\bin\EntityFramework.SqlServer.dll
+C:\Users\Ayça\Downloads\161110_güncel_\161109_\161110_WebForms_Uygulama\bin\EntityFramework.xml
+C:\Users\Ayça\Downloads\161110_güncel_\161109_\161110_WebForms_Uygulama\bin\EntityFramework.SqlServer.xml
+C:\Users\BA\Downloads\161110_WebForms\161110_güncel_\161109_\161110_WebForms_Uygulama\bin\161110_WebForms_Uygulama.dll.config
+C:\Users\BA\Downloads\161110_WebForms\161110_güncel_\161109_\161110_WebForms_Uygulama\bin\161110_WebForms_Uygulama.dll
+C:\Users\BA\Downloads\161110_WebForms\161110_güncel_\161109_\161110_WebForms_Uygulama\bin\161110_WebForms_Uygulama.pdb
+C:\Users\BA\Downloads\161110_WebForms\161110_güncel_\161109_\161110_WebForms_Uygulama\bin\EntityFramework.dll
+C:\Users\BA\Downloads\161110_WebForms\161110_güncel_\161109_\161110_WebForms_Uygulama\bin\EntityFramework.SqlServer.dll
+C:\Users\BA\Downloads\161110_WebForms\161110_güncel_\161109_\161110_WebForms_Uygulama\bin\EntityFramework.xml
+C:\Users\BA\Downloads\161110_WebForms\161110_güncel_\161109_\161110_WebForms_Uygulama\bin\EntityFramework.SqlServer.xml
+C:\Users\BA\Downloads\161110_WebForms\161110_güncel_\161109_\161110_WebForms_Uygulama\obj\Debug\161110_WebForms_Uygulama.csprojResolveAssemblyReference.cache
+C:\Users\BA\Downloads\161110_WebForms\161110_güncel_\161109_\161110_WebForms_Uygulama\obj\Debug\161110_WebForms_Uygulama.dll
+C:\Users\BA\Downloads\161110_WebForms\161110_güncel_\161109_\161110_WebForms_Uygulama\obj\Debug\161110_WebForms_Uygulama.pdb

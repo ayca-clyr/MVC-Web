@@ -1,0 +1,42 @@
+﻿@model _161114_MVC_HelloWorld.Models.Player
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detail</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="container">
+        <h1 class="page-header">Player Detail</h1> @*// page-header Alt Satır Ekliyor.*@
+    </header>
+    
+    <section class="container">
+       <div class="row">
+           <div class="col-xs-12 col-sm-6">
+               <div class="form-group">
+                   <label>Oyuncu Adı : </label>
+                   <div>@Model.FirstName</div>
+               </div>
+               <div class="form-group">
+                   <label>Oyuncu Soyadı : </label>
+                   <div>@Model.LastName</div>
+           </div>
+           <div class="form-group">
+               <label>Forma Numarası : </label>
+               <div>@Model.ShirtNumber</div>
+           </div>
+       </div>
+       </div>
+    </section>
+
+    <script src="~/Scripts/jquery-1.9.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+
+</body>
+</html>

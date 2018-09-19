@@ -1,0 +1,156 @@
+﻿
+        #container {
+            /*border:1px solid black;*/
+            margin: -8px;
+        }
+
+        nav {
+            /*border:1px solid black;*/
+            padding: 2%;
+            box-sizing: border-box;
+            text-align: left;
+            background-color: #3D3D3D;
+            
+        }
+
+        .navItem:nth-child(1) {
+            float: left;
+            font-size: 45px;
+            font-family: 'Edwardian Script ITC';
+            margin-top: -10px;
+        }
+
+        .navItem:nth-child(7) {
+            float: right;
+        }
+
+        .navItem:nth-child(8) {
+            float: right;
+        }
+
+      .navItem{
+          display: inline;
+            background-size: cover;
+            color: white;
+      }
+
+            .navItem a {
+                text-decoration: none;
+                color: dimgray;
+                padding: 0.5%; 
+                box-sizing: border-box;
+                transition: all 0.3s ease;
+                font-size: 12px;
+                margin-right: 10px;
+                
+            }
+         
+        #myName {
+            float: left;
+            font-size: 15px;
+            margin:0px;
+           
+        }
+        #myName ul li{
+            display:inline;
+        }
+
+        #end{
+            float:left;
+            margin:0px;
+        }
+       content {
+          float:left;
+          width:75%;
+          margin-left:300px;
+          margin:0px;
+          margin-top:-200px;
+          
+        }
+        #resim1{
+            margin-top:-10px;
+            float:left;
+            /*width:33%;*/
+            padding-left:25px;
+            /*padding-right:10%;*/
+           
+        }
+
+        footer {
+            background-color: white;
+            height: 50px;
+          
+            width: 200px;
+            float: left;
+            margin-left: 25px;
+            margin:0px;
+        }
+        footer ul{
+            margin:0px;
+        }
+        footer ul li{
+            margin:0px;
+        }
+     
+        .facebook, .linkedin, .instagram, .twitter, .googlePlus {
+            width: 25px;
+            height: 25px;
+            margin: 5px;
+            display: inline-block;
+            background-size: 100% 100%;
+            transition: all 1s ease;
+            float: left;
+            margin-left:8px;
+        }
+
+            .facebook:hover, .linkedin:hover, .instagram:hover, .twitter:hover, .googlePlus:hover {
+                transform: rotate(-30deg);
+                cursor: pointer;
+                width: 20px;
+                height: 20px;
+            }
+
+        .facebook {
+            background-image: url(/img/9.png);
+        }
+
+        .linkedin {
+            background-image: url(/img/11.png);
+        }
+
+        .instagram {
+            background-image: url(/img/12.png);
+        }
+
+        .twitter {
+            background-image: url(/img/10.png);
+        }
+
+        .googlePlus {
+            background-image: url(/img/13.png);
+        }
+
+        .yazi {
+            border: 1px solid rgba(219, 233, 233, 0.79);
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        .header a {
+            font-size: 20px;
+            color: #425795;
+            list-style-type: none;
+            text-decoration: none;
+        }
+
+
+            .header a:hover {
+                color: black;
+                text-decoration-style: none;
+            }
+          
+        aside ul li {
+            text-decoration: none;
+            list-style-type:none;
+        }
+      

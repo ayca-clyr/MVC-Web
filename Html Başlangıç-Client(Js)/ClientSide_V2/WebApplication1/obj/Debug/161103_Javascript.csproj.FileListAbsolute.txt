@@ -1,0 +1,6 @@
+C:\Users\BA\Downloads\161031_Maraton\ClientSide_V2\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\BA\Downloads\161031_Maraton\ClientSide_V2\WebApplication1\bin\WebApplication1.dll
+C:\Users\BA\Downloads\161031_Maraton\ClientSide_V2\WebApplication1\bin\WebApplication1.pdb
+C:\Users\BA\Downloads\161031_Maraton\ClientSide_V2\WebApplication1\obj\Debug\161103_Javascript.csprojResolveAssemblyReference.cache
+C:\Users\BA\Downloads\161031_Maraton\ClientSide_V2\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\BA\Downloads\161031_Maraton\ClientSide_V2\WebApplication1\obj\Debug\WebApplication1.pdb

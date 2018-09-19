@@ -1,0 +1,6 @@
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161108_JS_Jquery\bin\161108_JS_Jquery.dll.config
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161108_JS_Jquery\bin\161108_JS_Jquery.dll
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161108_JS_Jquery\bin\161108_JS_Jquery.pdb
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161108_JS_Jquery\obj\Debug\161108_JS_Jquery.csprojResolveAssemblyReference.cache
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161108_JS_Jquery\obj\Debug\161108_JS_Jquery.dll
+C:\Users\BA\Downloads\161107_JS_UygulamaDvmı\161107_JS_Uygulama\ClientSide_V2\161108_JS_Jquery\obj\Debug\161108_JS_Jquery.pdb

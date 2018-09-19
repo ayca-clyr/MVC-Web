@@ -1,0 +1,181 @@
+﻿ #container{
+            /*border:1px solid black;*/
+            margin:-8px;   
+        }
+        nav{
+            /*border:1px solid black;*/
+            padding:2%;
+            box-sizing: border-box;
+            text-align:right;
+        }
+
+        .navItem{ /* Class isimlerine . ile    id olanlarada # ile erişiyoruz. */
+            display:inline;  /*Yan yana yazdırıyor. Anasayfa-Hakkımda-vs...*/  /*Araştır*/
+        }
+        .navItem a{
+            text-decoration:none;
+            color:dimgray;
+            padding:1%;  /*İç Boşluk*/
+            box-sizing:border-box;
+            transition: all 0.3s ease;
+        }
+        .navItem a:hover{
+            color:red;
+        }
+        
+        #myName{
+            text-align:left;
+            font-size:35px;
+        }
+
+
+        #content{
+            background-image: url(/img/web-yazilim.jpg);
+            background-size:cover;
+            height:550px;
+            padding-top:150px;
+            box-sizing:border-box;
+        }
+        section{
+            background-color:white;
+            height:400px;
+            margin:0 25%;
+            width:800px;
+        }
+
+        figure{
+            width:50%;
+            float:left;
+            margin:0;
+
+        }
+        figure img{
+            width:100%;
+            /*height:400px;*/
+        }
+        article{
+            width: 50%;
+            float:left;
+            padding:6%;
+            box-sizing:border-box;
+
+            font-family:Arial, sans-serif;
+            color:#0000FF;
+        }
+
+       
+        /*article  span    --- article'ın altındaki bütün spanlar*/
+        /*article > span    --- article'ın hemen altındaki spanlar*/
+         /*article span:first-child   ---article'ın altındaki ilk span  */
+         article span:nth-child(1){
+             font-size:30px;
+             font-weight:bold;
+         }
+         article span:nth-child(2){
+             font-size:15px;
+             font-weight:bold;
+         }
+        .meInfoHeader{
+            font-weight:bold;
+        }
+        .meInfo {
+            font-style: italic;
+        }
+        .meInfo a{
+            text-decoration:none;   /*Alt yazı sildi. */
+            color:#0000FF
+        }
+        footer{
+   
+         background-color:#0000FF;
+            height:100px;
+            margin:0 25%;
+            width:800px;
+        }
+        .facebook,.linkedin,.instagram,.twitter,.googlePlus{
+            width:32px;
+            height:32px;
+            margin:10px;
+            display:inline-block;
+            background-size:100% 100%;
+            transition:all 1s ease;
+            
+            
+        }
+        .facebook:hover,.linkedin:hover,.instagram:hover,.twitter:hover,.googlePlus:hover{
+            transform:rotate(-30deg);
+            cursor:pointer;
+        }
+        .facebook {
+            background-image: url(/img/facebook.png);
+        }
+        .linkedin {
+            background-image: url(/img/instagram.png);
+        }
+         .instagram {
+            background-image: url(/img/linkedin.png);
+        }
+         .twitter {
+            background-image: url(/img/twitter.png);
+        } 
+         .googlePlus {
+            background-image: url(/img/googleplus.png);
+        }
+
+         /*OTHER PAGES*/
+         .otherFooter{
+             text-align:center;
+             width:auto;
+             margin:0;
+         }
+         .otherHeader{
+             background-image:url(/img/web-yazilim.jpg);
+             background-size:cover;
+             height:100px;
+
+         }
+         .otherSection{
+             /*height:auto;*/
+             height:600px;
+             overflow-y:scroll;
+             color:dimgray;
+             padding:20px;
+             box-sizing:border-box;
+             font:14px/1.4em avenir-lt-w01_35-light1475496, sans-serif;
+         }
+         table tr th{
+             width:200px;
+         }
+
+ table tr:nth-of-type(2n){
+     background-color:lightcyan !important;
+ }
+ .contactInput{
+     width:100%;
+    margin: 20px 0 20px 0 ;
+    text-align:center;
+   line-height:30px;
+   border-radius:20px 0 20px 0;
+   border:1px solid #0000FF;
+ }
+ /* Aynı isi buralar bile o zaman name'sine yani value'sine kadar devam et. Ayırt etmek için. Birden çok submit varsa yani.*/
+ .contactInput:focus{
+     outline:none;
+     box-shadow: 5px 5px 50px 3px #0000FF;  /* Araştır Gölgelendirme*/
+ }
+
+
+ input[class=contactInput][type=submit]{
+     cursor:pointer;
+     width:50%;
+    background-color:#0000FF !important;
+    color:white;
+    border-radius:20px;
+    transition: all 0.3s ease;
+    margin-left : 25%;
+ }
+ input[class=contactInput][type=submit]:hover{
+     background-color:green !important;
+     color:white;
+     border:1px solid green;
+ }

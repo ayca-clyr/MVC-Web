@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - InGame</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="well">
+            <h1>Mhrs Web Yönetim Paneli</h1>
+        </header>
+        <section>
+            <div class="row">
+                <nav class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="list-group">
+                        <a class="list-group-item" href="@Url.Action("Index","Klinik")">Klinik/Uzmanlık İşlemleri</a>
+                        <a class="list-group-item" href="@Url.Action("Index","Command")">Yönetici İşlemleri</a>
+                        <a class="list-group-item" href="@Url.Action("Index","Doctor")">Doktor Ekle/Güncelle/Sil</a>
+                        <a class="list-group-item" href="@Url.Action("Index","Tarih")">Doktor Çalışma Tarihleri</a>
+                        <a class="list-group-item" href="@Url.Action("Index","RandevuSaati")">Doktor Çalışma Saatleri</a>
+                    </div>
+                    <a class="btn btn-sm btn-warning" href="@Url.Action("KullaniciBilgileri","Home","AdminPanel")">Kullanıcı Bilgileri</a>
+                    <a class="btn btn-sm btn-danger" href="@Url.Action("Logout","Login")">Çıkış Yap</a>
+
+                </nav>
+                <div class="col-xs-12 col-sm-8 col-md-9" style="min-height: 500px;">
+
+                    @RenderBody()
+
+                </div>
+                <div class="col-md-9">
+                </div>
+            </div>
+        </section>
+        <footer class="well text-center">&copy; 2018 Mhrs Demosu</footer>
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+﻿body {   /*Ortadaki Resim*/
+    background-image: url(/img/Rapunzel.jpg);
+    background-size: 100% 100%;
+}
+
+#container {  /*Ortadaki web sitesi kısmındaki */
+    /*background-color:red;*/
+    width: 80%;
+    margin-left: 8%;
+    margin-top: 4%;
+    /*height:600px;*/
+    /*border:1px solid red;*/
+    background-color: rgba(255,0,0,0);
+    border-radius: 20px;
+}
+
+header { /* Yazının sağ sola gitmesi en üstteki Ayça Calayır'ın web sitesi kısmı*/
+    /*border:1px solid black;*/
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    padding: 2%;
+    box-sizing: border-box;
+    background-size: 100% 100%;
+    background-color: rgba(255,0,0,0);
+    
+    
+
+}
+header {
+    color:wheat;
+    background-color:rgba(255,0,0,0);
+}
+nav {   /*  Anasayfa yazısını sağ sola taşıyor*/
+    /*border: 1px solid black;*/
+    width: 30%;
+    padding: 2%;
+    box-sizing: border-box;
+    float: right;
+}
+
+    nav input {
+        width: 100%;
+    }
+
+    nav ul {
+        list-style-type: none; /*ul'deki noktaları siler*/
+    }
+
+        nav ul li a {  /* Yazıların renkleri Anasayfa olan*/
+            text-decoration: none; /*Alt çizgiler gidiyor.*/
+            color: wheat;
+        }
+
+        nav ul li {
+            margin: 10px;
+        }
+
+            nav ul li :hover {
+                background-color:green;
+            }
+
+            nav ul li a:hover { /*Üzerine gelince değişsin. Yazı*/
+                font-size: 20px;
+                color: wheat;
+                /*background-color:red;*/
+            }
+
+content {  /* Html nedir yazısının komplesinin yaslaması*/
+    /*border:1px solid black;*/
+    float: left;
+    width: 69%;
+    color:white;
+    background-color:rgba(255,0,0,0);
+    /*height:400px;*/
+}
+
+footer {  /* Ayça Company renkl işlemleri*/
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    /*border:1px solid black;*/
+    color: green;
+    background-color: wheat;
+    border-radius: 0 0 20px 20px; /* solüst,sağüst,sağalt,solalt */
+}
+
+section {   /* Galtasaray sağ sol işlemleri*/
+    /*border:1px solid black;*/
+    width: 85%;
+    float: right;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+aside {    /* Galatasaray  Renk işlemleri*/
+    width: 14%;
+    float: left;
+    padding: 4%;
+    box-sizing: border-box;
+    background-color: wheat;
+    color: green;
+    margin-top: 4%;
+    margin-bottom : 80px;
+    border-radius: 20px; /*Elementlerin köşelerini yuvarlar*/
+}

@@ -1,0 +1,12 @@
+C:\Users\BA\Desktop\Bilge Adam\161024-161104\161025_HTML_ClientSide\11_Javascript_Uygulama\bin\11_Javascript_Uygulama.dll.config
+C:\Users\BA\Desktop\Bilge Adam\161024-161104\161025_HTML_ClientSide\11_Javascript_Uygulama\bin\11_Javascript_Uygulama.dll
+C:\Users\BA\Desktop\Bilge Adam\161024-161104\161025_HTML_ClientSide\11_Javascript_Uygulama\bin\11_Javascript_Uygulama.pdb
+C:\Users\BA\Desktop\Bilge Adam\161024-161104\161025_HTML_ClientSide\11_Javascript_Uygulama\obj\Debug\11_Javascript_Uygulama.csprojResolveAssemblyReference.cache
+C:\Users\BA\Desktop\Bilge Adam\161024-161104\161025_HTML_ClientSide\11_Javascript_Uygulama\obj\Debug\11_Javascript_Uygulama.dll
+C:\Users\BA\Desktop\Bilge Adam\161024-161104\161025_HTML_ClientSide\11_Javascript_Uygulama\obj\Debug\11_Javascript_Uygulama.pdb
+C:\Users\BA\Documents\Visual Studio 2013\Projects\Solution1\11_Javascript_Uygulama\bin\11_Javascript_Uygulama.dll.config
+C:\Users\BA\Documents\Visual Studio 2013\Projects\Solution1\11_Javascript_Uygulama\bin\11_Javascript_Uygulama.dll
+C:\Users\BA\Documents\Visual Studio 2013\Projects\Solution1\11_Javascript_Uygulama\bin\11_Javascript_Uygulama.pdb
+C:\Users\BA\Documents\Visual Studio 2013\Projects\Solution1\11_Javascript_Uygulama\obj\Debug\11_Javascript_Uygulama.csprojResolveAssemblyReference.cache
+C:\Users\BA\Documents\Visual Studio 2013\Projects\Solution1\11_Javascript_Uygulama\obj\Debug\11_Javascript_Uygulama.dll
+C:\Users\BA\Documents\Visual Studio 2013\Projects\Solution1\11_Javascript_Uygulama\obj\Debug\11_Javascript_Uygulama.pdb

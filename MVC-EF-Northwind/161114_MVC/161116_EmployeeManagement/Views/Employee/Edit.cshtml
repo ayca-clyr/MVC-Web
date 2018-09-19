@@ -1,0 +1,82 @@
+﻿@using _161116_EmployeeManagement.EF.Entities
+@model Employee
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.Id != 0)
+{
+    <h2>Çalışan Düzenle</h2>
+}
+else
+{
+    <h2>Çalışan Ekle</h2>
+}
+
+
+@*@ViewData["Test"]
+@ViewBag.Test*@
+
+@using (Html.BeginForm())
+{
+   
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName, "Çalışan Adı")
+        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName, "Çalışan Soyadı")
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.Gender, "Cinsiyeti")
+        @Html.EnumDropDownListFor(m => m.Gender, new { @class = "form-control" })   @*Direk comboboxa geliyor.*@
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.DateOfBirth, "Doğum Tarihi")
+        @Html.TextBoxFor(m => m.DateOfBirth, new { @class = "form-control" })
+    </div>
+    
+    <div class="form-group">
+        @*For yazmazsan bunları m.DepartmentId değilde string şekilde yazman gerekiyor.*@
+        @Html.LabelFor(m => m.DepartmentId, "Departmanı")
+        @Html.DropDownListFor(m => m.DepartmentId, (SelectList)ViewBag.Departments, new { @class = "form-control" })
+        @* IEnumerable --> List desek de olur.  *@
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.Salary, "Maaşı")
+        @Html.TextBoxFor(m => m.Salary, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.HireDate, "Alınma Tarihi")
+        @Html.TextBoxFor(m => m.HireDate, new { @class = "form-control" })
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.PhoneNumber, "Telefon Numarası")
+        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.EmailAddress, "Email Adresi")
+        @Html.TextBoxFor(m => m.EmailAddress, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @if (Model.Id != 0)
+        {
+            <button class="btn btn-primary">Güncelle</button>
+        }
+        else
+        {
+            <button class="btn btn-primary">Kaydet</button>
+        }
+        <a href="/Employee" class="btn btn-danger">İptal</a>
+    </div>
+}
+

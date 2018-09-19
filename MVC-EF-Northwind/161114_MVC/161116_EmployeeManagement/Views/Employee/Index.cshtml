@@ -1,0 +1,76 @@
+﻿@model List<_161116_EmployeeManagement.Models.EmployeeListModel>
+@{
+    ViewBag.Title = "Çalışanlar Listesi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tüm Çalışanlar</h2>
+@*@if (ViewBag.ResultMessage != null)
+    {
+        <div class="alert alert-success">
+            @ViewBag.ResultMessage
+        </div>
+    }*@
+
+@if (TempData["ResultMessage"] != null)
+{
+    <div class="alert alert-success">
+
+        @* Hem oku hemde kalsın istiyorsak *@
+        @*@TempData.Peek("ResultMessage")*@
+
+        @*// TempData 1 kere okunduğu takdirde üstündeki veri gider.*@
+        @TempData["ResultMessage"]
+
+        @* Eğer Hep orda olmasını istiyorsanız bu methodu yazarız. *@       
+         @*
+             @{
+    TempData.Keep("ResultMessage");
+        }
+             *@
+
+    </div>
+}
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>Çalışan Adı</th>
+            <th>Çalışan Soyadı</th>
+            <th>Çalış Departmanı</th>
+            <th>Maaşı</th>
+            <th>Email Adresi</th>
+
+            <th>
+                @Html.ActionLink("Yeni Kayıt Ekle", "Edit", null, new { Class = "btn btn-warning btn-xs" })
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @{
+
+            foreach (var emp in Model)
+            {
+                <tr>
+
+                    <td>@emp.FirstName</td>
+                    <td>@emp.LastName</td>
+                    <td>@emp.DepartmentName </td>
+                    <td>@emp.Salary</td>
+                    <td>@emp.Email</td>
+
+                    <td>
+                        @Html.ActionLink("Düzenle", "Edit", new { id = emp.Id }, new { Class = "btn btn-primary btn-xs" })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Sil", "Delete", new { id = emp.Id }, new { Class = "btn btn-danger btn-xs" })
+
+                    </td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>
